@@ -1,3 +1,5 @@
 ﻿  ConsoleApplication2.cpp
 W:\programming\Practice\19\C++\ConsoleApplication2\ConsoleApplication2.cpp(6,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+W:\programming\Practice\19\C++\ConsoleApplication2\ConsoleApplication2.cpp(35,22): warning C4018: <=: несоответствие типов со знаком и без знака
+W:\programming\Practice\19\C++\ConsoleApplication2\ConsoleApplication2.cpp(9,7): warning C4101: gachi: неиспользованная локальная переменная
   ConsoleApplication2.vcxproj -> W:\programming\Practice\19\C++\ConsoleApplication2\Debug\ConsoleApplication2.exe

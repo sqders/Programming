@@ -11,6 +11,6 @@ if a == 0 :
 if b**2-4*a*c<0:
 	print("Корней нет")
 elif b**2-4*a*c == 0:
-	print(-b/(2*a))
+	print("x ="-b/(2*a))
 else:
-    print((-b+ math.sqrt(b**2-4*a*c))/(2*a),(-b- math.sqrt(b**2-4*a*c))/(2*a),sep="\n") 
+    print("x1 =",(-b+ math.sqrt(b**2-4*a*c))/(2*a),"\n","x2 =",(-b- math.sqrt(b**2-4*a*c))/(2*a),sep=" ") 

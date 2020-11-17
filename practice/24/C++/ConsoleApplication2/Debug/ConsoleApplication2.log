@@ -1,0 +1,4 @@
+﻿  ConsoleApplication2.cpp
+W:\programming\Practice\24\C++\ConsoleApplication2\ConsoleApplication2.cpp(31,22): warning C4018: <: несоответствие типов со знаком и без знака
+W:\programming\Practice\24\C++\ConsoleApplication2\ConsoleApplication2.cpp(15,6): warning C4101: mas: неиспользованная локальная переменная
+  ConsoleApplication2.vcxproj -> W:\programming\Practice\24\C++\ConsoleApplication2\Debug\ConsoleApplication2.exe

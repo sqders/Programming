@@ -1,0 +1,82 @@
+http://api.openweathermap.org/data/2.5/forecast?id=524901&lat=44.9&lon=34.1&units=metric&exclued=hourly&lang=ru&appid=0b187d44dbd22fecded8524e7dcd0a8e
+
+http://worldtimeapi.org/api/timezone/Europe/Simferopol
+
+#include <iostream>
+#include <cpp_httplib/httplib.h>
+using namespace httplib;
+ {"abbreviation":"MSK","client_ip":"185.120.89.248","datetime":"2020-11-28T17:01:30.792775+03:00","day_of_week":6,"day_of_year":333,"dst":false,"dst_from":null,"dst_offset":0,"dst_until":null,"raw_offset":10800,"timezone":"Europe/Simferopol","unixtime":1606572090,"utc_datetime":"2020-11-28T14:01:30.792775+00:00","utc_offset":"+03:00","week_number":48}
+int main(){
+  // Создаём клиент и привязываем к домену. Туда пойдут наши запросы
+  Client cli("http://worldtimeapi.org");
+  // Отправляем get-запрос и ждём ответ, который сохраняется в переменной res
+  auto res = cli.Get("/api/timezone/Europe/Simferopol");
+  // res преобразуется в true, если запрос-ответ прошли без ошибок
+  if (res) {
+    // Проверяем статус ответа, т.к. может быть 404 и другие
+    if (res->status == 200) {
+      // В res->body лежит string с ответом сервера
+      std::cout << res->body << std::endl;
+    }else{
+      std::cout << "Status code: " << res->status << std::endl;
+    }
+  }
+  else {
+    auto err = res.error();
+    std::cout << "Error code: " << err << std::endl;  
+  }
+}
+
+
+#include <iostream>
+#include <string>
+#include <nlohmann/json.hpp>
+-
+ 
+int main()
+{
+// Какой-то JSON в виде строки
+string str =
+R"({
+  "pi": 3.141,
+  "happy": true,
+  "name": "Niels",
+  "nothing": null,
+  "answer": {
+    "everything": 42
+  },
+  "list": [1, 0, 2],
+  "object": {
+    "currency": "USD",
+    "value": 42.99
+  }
+})";
+  // Парсим строку и получаем объект JSON
+  json j = json::parse(str);
+  // Достаём значения
+  double pi = j["pi"];                 cout << "pi " << pi << endl;
+  bool happy = j["happy"];             cout << "happy " << happy << endl;
+  string name = j["name"];             cout << "name " << name << endl;
+  double value = j["object"]["value"]; cout << "value " << value << endl;
+  cout << "every " << to_string(j["answer"]["everything"].get<int>()) << endl;
+  // Идём по массиву
+  for (int i = 0; i < j["list"].size(); i++)
+    cout << "list[" << i << "] = " << j["list"][i] << endl;
+  // Пустой JSON
+  json j2;
+  // Заполняем разными данными
+  j2["num"] = 1;
+  j2["array"] = json::array();
+  j2["array"].push_back(1);
+  j2["array"].push_back(2);
+  j2["object"] = json::object();
+  j2["object"].push_back({"PI", pi});
+  j2["object"].push_back({"exp", 2.71});
+  // Преобразуем в строку и выводим
+  std::cout << j2.dump(4);
+}
+ {"abbreviation":"MSK","client_ip":"185.120.89.248"
+,"datetime":"2020-11-28T17:01:30.792775+03:00","day_of_week":6,"day_of_year":333,"dst":false
+,"dst_from":null,"dst_offset":0,"dst_until":null,"raw_offset":10800,"timezone":"Europe/Simferopol"
+,"unixtime":1606572090,
+"utc_datetime":"2020-11-28T14:01:30.792775+00:00","utc_offset":"+03:00","week_number":48}

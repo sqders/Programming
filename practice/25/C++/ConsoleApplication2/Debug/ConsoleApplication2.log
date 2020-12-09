@@ -1,0 +1,12 @@
+﻿  ConsoleApplication2.cpp
+W:\programming\Practice\25\C++\ConsoleApplication2\ConsoleApplication2.cpp(54,18): warning C4018: <: несоответствие типов со знаком и без знака
+W:\programming\Practice\25\C++\ConsoleApplication2\ConsoleApplication2.cpp(56,21): warning C4018: <: несоответствие типов со знаком и без знака
+W:\programming\Practice\25\C++\ConsoleApplication2\ConsoleApplication2.cpp(63,20): warning C4018: <: несоответствие типов со знаком и без знака
+W:\programming\Practice\25\C++\ConsoleApplication2\ConsoleApplication2.cpp(65,21): warning C4018: <: несоответствие типов со знаком и без знака
+W:\programming\Practice\25\C++\ConsoleApplication2\ConsoleApplication2.cpp(97,20): warning C4018: <: несоответствие типов со знаком и без знака
+W:\programming\Practice\25\C++\ConsoleApplication2\ConsoleApplication2.cpp(100,19): warning C4018: <: несоответствие типов со знаком и без знака
+W:\programming\Practice\25\C++\ConsoleApplication2\ConsoleApplication2.cpp(117,20): warning C4018: <: несоответствие типов со знаком и без знака
+W:\programming\Practice\25\C++\ConsoleApplication2\ConsoleApplication2.cpp(130,20): warning C4018: <: несоответствие типов со знаком и без знака
+W:\programming\Practice\25\C++\ConsoleApplication2\ConsoleApplication2.cpp(132,21): warning C4018: <: несоответствие типов со знаком и без знака
+W:\programming\Practice\25\C++\ConsoleApplication2\ConsoleApplication2.cpp(143,8): warning C4018: <: несоответствие типов со знаком и без знака
+  ConsoleApplication2.vcxproj -> W:\programming\Practice\25\C++\ConsoleApplication2\Debug\ConsoleApplication2.exe

@@ -1,4 +1,0 @@
-﻿  ConsoleApplication2.cpp
-W:\programming\Practice\06\C++\ConsoleApplication2\ConsoleApplication2.cpp(6,21): warning C4101: x1: неиспользованная локальная переменная
-W:\programming\Practice\06\C++\ConsoleApplication2\ConsoleApplication2.cpp(6,25): warning C4101: x2: неиспользованная локальная переменная
-  ConsoleApplication2.vcxproj -> W:\programming\Practice\06\C++\ConsoleApplication2\Debug\ConsoleApplication2.exe

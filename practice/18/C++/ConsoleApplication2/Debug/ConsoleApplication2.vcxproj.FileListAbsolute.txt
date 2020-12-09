@@ -1,2 +1,0 @@
-W:\programming\Practice\18\ConsoleApplication2\Debug\ConsoleApplication2.exe
-W:\programming\Practice\18\ConsoleApplication2\Debug\ConsoleApplication2.pdb

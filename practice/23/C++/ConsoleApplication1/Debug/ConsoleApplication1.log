@@ -1,3 +1,0 @@
-﻿  ConsoleApplication1.cpp
-W:\programming\Practice\23\C++\ConsoleApplication1\aao\aao1.h(11,49): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-  ConsoleApplication1.vcxproj -> W:\programming\Practice\23\C++\ConsoleApplication1\Debug\ConsoleApplication1.exe

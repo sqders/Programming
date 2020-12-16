@@ -1,0 +1,182 @@
+{"nothing":null,"response":{"buttons":[{}],"text":"","tts":""},"version":[1.0]}
+server started
+{"nothing":null,"response":{"buttons":[{"hide":false,"payload":null,"title":"
+server started
+{"nothing":null,"response":{"buttons":[{"payload":null,"title":"
+server started
+{"nothing":null,"response":{"buttons":[{"payload":{},"title":"
+server started
+{"nothing":null,"response":{"buttons":[{}],"text":"","tts":""},"version":[1.0]}
+server started
+{"nothing":null,"response":{"buttons":[{"hide":false,"payload":{},"title":"","url":""}],"end_session":false,"text":"","tts":""},"version":[1.0]}
+server started
+{
+    "nothing": null,
+    "response": {
+        "buttons": [
+            {
+                "hide": false,
+                "payload": {},
+                "title": "",
+                "url": ""
+            }
+        ],
+        "end_session": false,
+        "text": "",
+        "tts": ""
+    },
+    "version": [
+        1.0
+    ]
+}
+server started
+
+server started
+
+server started
+{
+    "nothing": null,
+    "response": {
+        "buttons": [
+            {
+                "hide": false,
+                "payload": {},
+                "title": "",
+                "url": ""
+            }
+        ],
+        "end_session": false,
+        "text": "",
+        "tts": ""
+    }
+}
+server started
+{
+    "nothing": null,
+    "response": {
+        "buttons": [
+            {
+                "hide": false,
+                "payload": {},
+                "title": "",
+                "url": ""
+            }
+        ],
+        "end_session": false,
+        "text": "",
+        "tts": ""
+    },
+    "version": {}
+}
+server started
+{
+    "nothing": null,
+    "response": {
+        "buttons": [
+            {
+                "hide": false,
+                "payload": {},
+                "title": "",
+                "url": ""
+            }
+        ],
+        "end_session": false,
+        "text": "",
+        "tts": ""
+    },
+    "version": [
+        [
+            "version",
+            1.0
+        ]
+    ]
+}
+server started
+{
+    "nothing": null,
+    "response": {
+        "buttons": [
+            {
+                "hide": false,
+                "payload": {},
+                "title": "",
+                "url": ""
+            }
+        ],
+        "end_session": false,
+        "text": "",
+        "tts": ""
+    },
+    "version": 1.0
+}
+server started
+{
+    "nothing": null,
+    "response": {
+        "buttons": [
+            {
+                "hide": false,
+                "payload": {},
+                "title": "",
+                "url": ""
+            }
+        ],
+        "end_session": false,
+        "text": "",
+        "tts": ""
+    },
+    "version": 1.0
+}
+server started
+{
+    "nothing": null,
+    "response": {
+        "buttons": [
+            {
+                "hide": false,
+                "payload": {},
+                "title": "",
+                "url": ""
+            }
+        ],
+        "end_session": false,
+        "text": "",
+        "tts": ""
+    },
+    "version": 1.0
+}
+server started
+
+server started
+
+server started
+
+server started
+
+server started
+
+server started
+
+server started
+
+server started
+{"nothing":null,"response":{"buttons":[{"hide":false,"payload":{},"title":"","url":""}],"end_session":false,"text":"
+server started
+{"nothing":null,"response":{"buttons":[{"hide":false,"payload":{},"title":"","url":""}],"end_session":false,"text":"Здравствуйте! Я помогу вам с покупками.","tts":"Здравствуйте! Я помогу вам с покупками."},"version":1.0}
+server started
+{"nothing":null,"response":{"buttons":[{"hide":false,"payload":{},"title":"","url":""}],"end_session":false,"text":"Здравствуйте! Я помогу вам с покупками.","tts":"Здравствуйте! Я помогу вам с покупками."},"version":"1.0"}
+server started
+{"nothing":null,"response":{"buttons":[{"hide":false,"payload":{},"title":""}],"end_session":false,"text":"Здравствуйте! Я помогу вам с покупками.","tts":"Здравствуйте! Я помогу вам с покупками."},"version":"1.0"}
+server started
+{"nothing":null,"response":{"buttons":[{"hide":false,"payload":{},"title":""}],"end_session":false,"text":"Здравствуйте! Я помогу вам с покупками.","tts":"Здравствуйте! Я помогу вам с покупками."},"version":"1.0"}
+server started
+{"nothing":null,"response":{"buttons":[{"hide":false,"payload":"Молчать","title":"Молчать"}],"end_session":false,"text":"Здравствуйте! Я помогу вам с покупками.","tts":"Здравствуйте! Я помогу вам с покупками."},"version":"1.0"}{"nothing":null,"response":{"buttons":[{"hide":false,"payload":{},"title":""}],"end_session":false,"text":"","tts":""},"version":"1.0"}{"nothing":null,"response":{"buttons":[{"hide":false,"payload":"Молчать","title":"Молчать"}],"end_session":false,"text":"Здравствуйте! Я помогу вам с покупками.","tts":"Здравствуйте! Я помогу вам с покупками."},"version":"1.0"}{"nothing":null,"response":{"buttons":[{"hide":false,"payload":{},"title":""}],"end_session":false,"text":"","tts":""},"version":"1.0"}{"nothing":null,"response":{"buttons":[{"hide":false,"payload":{},"title":""}],"end_session":false,"text":"","tts":""},"version":"1.0"}
+server started
+{"nothing":null,"response":{"buttons":[{"hide":false,"payload":{},"title":""}],"end_session":false,"text":"Молчу, молчу","tts":"Молчу, молчу"},"version":"1.0"}
+server started
+
+server started
+{"nothing":null,"response":{"buttons":[{"hide":false,"payload":"Молчать","title":"Молчать"}],"end_session":false,"text":"Здравствуйте! Я помогу вам с покупками.","tts":"Здравствуйте! Я помогу вам с покупками."},"version":"1.0"}{"nothing":null,"response":{"buttons":[{"hide":false,"payload":{},"title":""}],"end_session":false,"text":"","tts":""},"version":"1.0"}
+server started
+{"nothing":null,"response":{"buttons":[{"hide":false,"payload":{},"title":""}],"end_session":false,"text":"Молчу, молчу","tts":"Молчу, молчу"},"version":"1.0"}{"nothing":null,"response":{"buttons":[{"hide":false,"payload":{},"title":""}],"end_session":false,"text":"Молчу, молчу","tts":"Молчу, молчу"},"version":"1.0"}
+server started

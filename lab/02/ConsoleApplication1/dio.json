@@ -1,1 +1,1 @@
-{"nothing":null,"response":{"buttons":[{"hide":false,"payload":{},"title":""}],"end_session":false,"text":"Молчу, молчу","tts":"Молчу, молчу"},"version":"1.0"}
+{"response":{"buttons":[{"hide":false,"payload":"Молчать","title":"Молчать"},{"payload":"Помощь","title":"Помощь"}],"end_session":true,"text":"Заходите ещё","tts":"Заходите ещё"},"version":"1.0"}

@@ -4,7 +4,7 @@
 #include <nlohmann/json.hpp>
 #include <locale>
 #include <fstream>
-
+#include <sstream>
 using namespace httplib;
 using json = nlohmann::json;
 using namespace std;
@@ -27,7 +27,6 @@ int main() {
     svr.Post("/webhooks",Foo_webhooks);
     svr.Get("/webhooks", Foo_webhooks);
     svr.listen("localhost", 1234);
-
 }
 string swap(string word, string word_1, string word_2)
 {
@@ -40,6 +39,7 @@ string swap(string word, string word_1, string word_2)
     }
     return word;
 }
+
 void gen_response(const Request& req, Response& res) {
     ofstream logger("log.txt", ofstream::app);
     string str=u8R"()",j_str= req.body.c_str();
@@ -59,29 +59,15 @@ void gen_response(const Request& req, Response& res) {
     }
     else {
         json jreq = json::parse(req.body.c_str()), jres;
-        string user_id = to_string(jreq["state"]["application"]["value"].get<int>());
+        
 
-        string users_str = u8"";
-        ifstream users_file("users.json");
-        string str_p;
-        while (!users_file.eof())
-        {
-            str_p = u8"";
-            getline(users_file, str_p);
-            users_str += str_p;
-        }
-        users_file.close();
-        json j_users = json::parse(users_str);
 
-        if (j_users["users"][user_id] == jres["nothing"])
-        {
-            j_users["users"][user_id] = json::object();
-            j_users["users"][user_id].push_back({ "tts",1 });
-            j_users["users"][user_id]["sina"] = json::object();
-            j_users["users"][user_id].push_back({ "mode",1 });
-        }
+       
+        
 
-        jres.push_back({ "version","1.0" });
+        json j_users ;
+
+        jres["version"]="1.0";
         jres["response"] = json::object();
         jres["response"].push_back({ "text","" });
         jres["response"].push_back({ "tts","" });
@@ -96,30 +82,225 @@ void gen_response(const Request& req, Response& res) {
         jres["response"]["buttons"].push_back(json::object());
         jres["response"]["buttons"][1]["title"] = u8"Помощь";
         jres["response"]["buttons"][1]["payload"] = u8"Помощь";
+    
 
-
+    
         if (jreq["session"]["new"])
         {
             jres["response"]["text"] = u8"Здравствуйте! Я помогу вам с покупками.";
-            
+            j_users["tts"]=1 ;
+            j_users["sina"] = json::array();
+            j_users["mode"]=0 ;
+            jres["user_state_update"] = j_users;
         }
-        else if (jreq["request"]["command"] == "" && jreq["request"]["original_utterance"] == "ping" && jreq["requset"]["type"] == "SimpleUtterance")
+        else
         {
-
+            j_users = jreq["state"]["user"];
+        }
+        if (j_users["mode"]==1)
+        {
+            if (jreq["request"]["command"] == "" && jreq["request"]["original_utterance"] == "ping" && jreq["requset"]["type"] == "SimpleUtterance")
+            {
+                jres["response"]["text"] = u8" ";
+            }
+            else if (jreq["request"]["nlu"]["tokens"][0] == u8"молчать")
+            {
+                jres["response"]["text"] = u8"Выключает озвучивание текста\nО чём ещё рассказать ?";
+            }
+            else if (jreq["request"]["nlu"]["tokens"][0] == u8"говорить")
+            {
+                jres["response"]["text"] = u8"Включает озвучивание текста\nО чём ещё рассказать ?";
+            }
+            else if (jreq["request"]["nlu"]["tokens"][0] == u8"помощь")
+            {
+                jres["response"]["text"] = u8"Помощь помогает\nО чём ещё рассказать ?";
+            }
+            else if (jreq["request"]["payload"] == u8"Выйти из помощи?"||jreq["request"]["command"] == u8"Выйти из помощи?")
+            {
+                jres["response"]["text"] = u8"Помощь не помогает\nО чём ещё рассказать ?";
+            }
+            else if (jreq["request"]["payload"] == u8"Очистить корзину\nО чём ещё рассказать ?")
+            {
+                jres["response"]["text"] = u8"Убирает все предметы и цены в корзине.Их больше не вернуть...\nО чём ещё рассказать ?";
+            }
+            else if (jreq["request"]["nlu"]["tokens"][0] == u8"добавить" && jreq["request"]["nlu"]["tokens"][1] == u8"в" && jreq["request"]["nlu"]["tokens"][2] == u8"корзину")
+            {
+                jres["response"]["text"] = u8"Добавляет в корзину что-то включая цену этого чего-то.\nО чём ещё рассказать ?";
+            }
+            else if (jreq["request"]["payload"] == u8"Что в корзине")
+            {
+                jres["response"]["text"] = u8"Показывает что находится в корзине и их цену\nО чём ещё рассказать ?";
+            }
+            else if (jreq["request"]["nlu"]["tokens"][0] == u8"удалить" && jreq["request"]["nlu"]["tokens"][1] == u8"из" && jreq["request"]["nlu"]["tokens"][2] == u8"корзины")
+            {
+                jres["response"]["text"] = u8"Удаляет что-то из корзины.Что-то будет утрачено навсегда...\nО чём ещё рассказать ?";
+            }
+            else if (jreq["request"]["payload"] == u8"Сумма")
+            {
+                jres["response"]["text"] = u8"Складывает цены всего что есть в корзине.\nО чём ещё рассказать ?";
+                    }
+            else if (jreq["request"]["payload"] == u8"Выйти из помощи")
+            {
+                jres["response"]["text"] = u8"Обращайтесь ещё";
+                j_users["mode"] = 0;
+                jres["user_state_update"] = j_users;
+            }
+            else if (jreq["request"]["payload"] == u8"Покупка завершена")
+            {
+                jres["response"]["text"] = u8"Завершает сеанс .До связи\nО чём ещё рассказать ?";
+            }
+          }
+        else{
+        logger << j_users.dump(2);
+        if (jreq["request"]["command"] == "" && jreq["request"]["original_utterance"] == "ping" && jreq["requset"]["type"] == "SimpleUtterance")
+        {
+            
         }
         else if (jreq["request"]["nlu"]["tokens"][0] == u8"молчать")
         {
             jres["response"]["text"] = u8"Молчу, молчу";
-            j_users["users"][user_id]["tts"] = 0;
+            j_users["tts"] = 0;
+            jres["user_state_update"] = j_users;
         }
-        else if (jreq["request"]["nlu"]["tokens"][0] == u8"молчать")
+        else if (jreq["request"]["nlu"]["tokens"][0] == u8"говорить")
         {
-
+            jres["response"]["text"] = u8"Хорошо";
+            j_users["tts"] = 1;
+            jres["user_state_update"] = j_users;
         }
-
-
-
-        if (j_users["users"][user_id]["tts"] == 1)
+        else if (jreq["request"]["nlu"]["tokens"][0] == u8"помощь")
+        {
+            j_users["mode"] = 1;
+            jres["user_state_update"] = j_users;
+            jres["response"]["text"] = u8R"(пояснения доделаю потом гыгы 
+О чем рассказать подробнее?)";
+            jres["response"]["buttons"][1]["title"] = u8"Выйти из помощи";
+            jres["response"]["buttons"][1]["payload"] = u8"Выйти из помощи";
+            
+        }
+        else if (jreq["request"]["command"] == u8"очистить корзину")
+        {
+            j_users["sina"]=json::array();
+            jres["response"]["text"] = u8"Корзина пуста";
+            jres["user_state_update"] = j_users;
+        }
+        else if (jreq["request"]["nlu"]["tokens"][0] == u8"добавить"&& jreq["request"]["nlu"]["tokens"][1] == u8"в"&& jreq["request"]["nlu"]["tokens"][2] == u8"корзину")
+        {
+            
+            string name=u8"", cost=u8"";
+            for (int i = 3; i < jreq["request"]["nlu"]["tokens"].size()-2; i++)
+            {
+                name += jreq["request"]["nlu"]["tokens"][i].get<string>()+u8" ";
+            }
+            int i = jreq["request"]["nlu"]["tokens"].size();
+            cost += jreq["request"]["nlu"]["tokens"][i-2].get<string>() + u8" ";
+            cost += jreq["request"]["nlu"]["tokens"][i-1].get<string>();
+            j_users["sina"].push_back(json::object());
+            i = j_users["sina"].size();
+            j_users["sina"][i - 1].push_back({ "item",name });
+            j_users["sina"][i - 1].push_back({ "price",cost });
+            jres["response"]["text"] = u8"OK";
+            jres["user_state_update"] = j_users;
+        }
+        else if (jreq["request"]["command"] == u8"что в корзине")
+        {
+            if (j_users["sina"].size() == 0)
+            {
+                jres["response"]["text"] = u8"Корзина пуста";
+            }
+            else
+            {
+                string what_in_the_black_box = u8"";
+                for (int i = 0; i < j_users["sina"].size() - 1; i++)
+                {
+                    what_in_the_black_box += j_users["sina"][i]["item"].get<string>() + j_users["sina"][i]["price"].get<string>() + u8'\n';
+                    
+                }
+                int  i = j_users["sina"].size()-1;
+                what_in_the_black_box += j_users["sina"][i]["item"].get<string>() + j_users["sina"][i]["price"].get<string>();
+                jres["response"]["text"] = u8"В корзине :\n"+what_in_the_black_box;
+            }
+        }
+        else if (jreq["request"]["nlu"]["tokens"][0] == u8"удалить" && jreq["request"]["nlu"]["tokens"][1] == u8"из" && jreq["request"]["nlu"]["tokens"][2] == u8"корзины")
+        {
+            string name = u8"",items=u8"[";
+            jres["response"]["text"] = u8"Такого в корзине нет";
+            for (int i = 3; i < jreq["request"]["nlu"]["tokens"].size() ; i++)
+            {
+                name += jreq["request"]["nlu"]["tokens"][i].get<string>() + u8" ";
+            }
+            int kek = 0;
+            for (int i = 0; i < j_users["sina"].size(); i++)
+            {
+                if (name == j_users["sina"][i]["item"].get<string>())
+                {
+                    jres["response"]["text"] = u8"Удалил " + name;
+                    continue;
+                }
+                if (kek !=0)
+                {
+                    items += u8",";
+                } 
+                kek++;
+                items += u8"{\"item\":\"" + j_users["sina"][i]["item"].get<string>() + u8"\",\"price\":\"" + j_users["sina"][i]["price"].get<string>() + "\"}";
+                
+                logger << items + "\n";
+            }
+            items += u8"]";
+            j_users["sina"] = json::parse(items);
+            jres["user_state_update"] = j_users;
+        }
+        else if (jreq["request"]["command"] == u8"сумма")
+        {
+        int sum = 0;
+            for (int i = 0; i < j_users["sina"].size(); i++)
+            {
+                sum += stoi(j_users["sina"][i]["price"].get<string>());
+            }
+            jres["response"]["text"] = u8"Сумма в корзине составляет " + to_string(sum) + u8" руйблей";
+        }
+        else if (jreq["request"]["command"] == u8"покупка завершена")
+        {
+        jres["response"]["end_session"] = true;
+        jres["response"]["text"] = u8"Заходите ещё";
+        string post_web, plus = "";
+        if (jreq["session"]["user"]["user_id"].get<string>() != "") {
+            post_web = "{\"user_id\":\"" + jreq["session"]["user"]["user_id"].get<string>()+"\",\"check\":[";
+        }
+        else
+        {
+            post_web = "\"user_id\":\"anonymous\",\"check\":";
+        }
+        ofstream users_o("users.json");
+        users_o << j_users["sina"];
+        users_o.close();
+        ifstream users_i("users.json");
+        while (!users_i.eof())
+        {
+            plus = u8"";
+            getline(users_i, plus);
+            post_web += plus;
+        }
+        post_web += "}";
+        users_i.close();
+        Client cli("http://webhook.site");
+        auto res = cli.Post("/d0f9f426-ed40-4369-b9b0-dd5051755a5a", post_web, "text/json");
+        if (res) {
+            if (res->status == 200) {
+                std::cout << res->body << std::endl;
+            }
+            else {
+                std::cout << "Status code: " << res->status << std::endl;
+           }
+        }
+        else {
+            auto err = res.error();
+            std::cout << "Error code: " << err << std::endl;
+        }
+        }
+            } 
+        
+        if (j_users["tts"] == 1)
         {
             string tts = jres["response"]["text"].get<string>();
             jres["response"]["tts"] = tts;
@@ -129,7 +310,43 @@ void gen_response(const Request& req, Response& res) {
             jres["response"]["buttons"][0]["title"] = u8"Говорить";
             jres["response"]["buttons"][0]["payload"] = u8"Говорить";
         }
-            logger << jres;
+        if (j_users["mode"] == 1)
+        {   
+            jres["response"]["buttons"][0]["title"] = u8"Выйти из помощи";
+            jres["response"]["buttons"][0]["payload"] = u8"Выйти из помощи";
+            jres["response"]["buttons"][1]["title"] = u8"Выйти из помощи?";
+            jres["response"]["buttons"][1]["payload"] = u8"Выйти из помощи?";
+            jres["response"]["buttons"].push_back(json::object());
+            jres["response"]["buttons"][2]["title"] = u8"Молчать";
+            jres["response"]["buttons"][2]["payload"] = u8"Молчать";
+            jres["response"]["buttons"].push_back(json::object());
+            jres["response"]["buttons"][3]["title"] = u8"Говорить";
+            jres["response"]["buttons"][3]["payload"] = u8"Говорить";
+            jres["response"]["buttons"].push_back(json::object());
+            jres["response"]["buttons"][4]["title"] = u8"Помощь";
+            jres["response"]["buttons"][4]["payload"] = u8"Помощь";
+            jres["response"]["buttons"].push_back(json::object());
+            jres["response"]["buttons"][5]["title"] = u8"Очистить корзину";
+            jres["response"]["buttons"][5]["payload"] = u8"Очистить корзину";
+            jres["response"]["buttons"].push_back(json::object());
+            jres["response"]["buttons"][6]["title"] = u8"Добавить в корзину";
+            jres["response"]["buttons"][6]["payload"] = u8"Добавить в корзину";
+            jres["response"]["buttons"].push_back(json::object());
+            jres["response"]["buttons"][7]["title"] = u8"Что в корзине";
+            jres["response"]["buttons"][7]["payload"] = u8"Что в корзине";
+            jres["response"]["buttons"].push_back(json::object());
+            jres["response"]["buttons"][8]["title"] = u8"Сумма";
+            jres["response"]["buttons"][8]["payload"] = u8"Сумма";
+            jres["response"]["buttons"].push_back(json::object());
+            jres["response"]["buttons"][9]["title"] = u8"Удалить из корзины";
+            jres["response"]["buttons"][9]["payload"] = u8"Удалить из корзины";
+            jres["response"]["buttons"].push_back(json::object());
+            jres["response"]["buttons"][10]["title"] = u8"Покупка завершена";
+            jres["response"]["buttons"][10]["payload"] = u8"Покупка завершена";
+        }
+        
+         logger << "\n2\n"+j_users.dump(4);
+            string str_p;
             ofstream dio("dio.json");
             dio << jres;
             dio.close();
@@ -141,9 +358,9 @@ void gen_response(const Request& req, Response& res) {
                 str += str_p;
             }
             dii.close();
+      
     }
     
-      
     
     res.set_content(str, "text/json; charset=UTF-8");
 }

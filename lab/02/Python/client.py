@@ -15,7 +15,7 @@ def index():
 			ticha[len(ticha)-1]["datetime"]= datetime.datetime.now()
 		lenght=str(len(ticha))
 		print(ticha)
-		if(len(ticha)!=1000):
+		if(len(ticha)!=10):
 			obook=openpyxl.open("data.xlsx",read_only=True)
 			osheet=obook.active
 			print(osheet.max_column)

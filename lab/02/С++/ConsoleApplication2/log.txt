@@ -1,0 +1,314 @@
+{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [],
+  "tts": 1,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 0,
+    "session": {},
+    "sina": [],
+    "tts": 1,
+    "value": 60
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [],
+  "tts": 1,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 0,
+    "session": {},
+    "sina": [],
+    "tts": 1,
+    "value": 60
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [],
+  "tts": 1,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 0,
+    "session": {},
+    "sina": [],
+    "tts": 1,
+    "value": 60
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [],
+  "tts": 1,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 0,
+    "session": {},
+    "sina": [
+        {
+            "item": "чай ",
+            "price": "100 р"
+        }
+    ],
+    "tts": 1,
+    "value": 60
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [
+    {
+      "item": "чай ",
+      "price": "100 р"
+    }
+  ],
+  "tts": 1,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 0,
+    "session": {},
+    "sina": [
+        {
+            "item": "чай ",
+            "price": "100 р"
+        }
+    ],
+    "tts": 1,
+    "value": 60
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [],
+  "tts": 1,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 0,
+    "session": {},
+    "sina": [],
+    "tts": 1,
+    "value": 60
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [],
+  "tts": 1,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 0,
+    "session": {},
+    "sina": [
+        {
+            "item": "чай ",
+            "price": "200 р"
+        }
+    ],
+    "tts": 1,
+    "value": 60
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [
+    {
+      "item": "чай ",
+      "price": "200 р"
+    }
+  ],
+  "tts": 1,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 0,
+    "session": {},
+    "sina": [
+        {
+            "item": "чай ",
+            "price": "200 р"
+        }
+    ],
+    "tts": 1,
+    "value": 60
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [
+    {
+      "item": "чай ",
+      "price": "200 р"
+    }
+  ],
+  "tts": 1,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 0,
+    "session": {},
+    "sina": [
+        {
+            "item": "чай ",
+            "price": "200 р"
+        }
+    ],
+    "tts": 1,
+    "value": 60
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [
+    {
+      "item": "чай ",
+      "price": "200 р"
+    }
+  ],
+  "tts": 1,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 1,
+    "session": {},
+    "sina": [
+        {
+            "item": "чай ",
+            "price": "200 р"
+        }
+    ],
+    "tts": 1,
+    "value": 60
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [],
+  "tts": 1,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 1,
+    "session": {},
+    "sina": [],
+    "tts": 1,
+    "value": 60
+}{"webhooks":["https://www.twitch.tv/silvername"]}
+server started
+
+server started

@@ -69,7 +69,7 @@ void gen_response(const Request& req, Response& res) {
 
         jres["version"] = "1.0";
         jres["response"] = json::object();
-        jres["response"].push_back({ "text","" });
+        jres["response"].push_back({ "text"," " });
         jres["response"].push_back({ "tts","" });
         jres["response"]["buttons"] = json::array();
         jres["response"]["buttons"].push_back(json::object());
@@ -113,11 +113,11 @@ void gen_response(const Request& req, Response& res) {
             }
             else if (jreq["request"]["nlu"]["tokens"][0] == u8"помощь")
             {
-                jres["response"]["text"] = u8"Помощь помогает\nО чём ещё рассказать ?";
+                jres["response"]["text"] = u8"Помощь помогает вам разобраться в командах навыка\nО чём ещё рассказать ?";
             }
             else if (jreq["request"]["payload"] == u8"Выйти из помощи?" || jreq["request"]["command"] == u8"Выйти из помощи?")
             {
-                jres["response"]["text"] = u8"Помощь не помогает\nО чём ещё рассказать ?";
+                jres["response"]["text"] = u8"Помощь больше не помогает\nО чём ещё рассказать ?";
             }
             else if (jreq["request"]["payload"] == u8"Очистить корзину\nО чём ещё рассказать ?")
             {
@@ -172,7 +172,13 @@ void gen_response(const Request& req, Response& res) {
             {
                 j_users["mode"] = 1;
                 jres["user_state_update"] = j_users;
-                jres["response"]["text"] = u8R"(пояснения доделаю потом гыгы 
+                jres["response"]["text"] = u8R"(Молчать-мутить навык
+Говорить-анмутить навык
+Помощь - помогает
+Очистить корзину - очищает корзину
+Добавить в корзину - добавляет в корзину предмет с ценой
+Что в корзине - показывает содержимое корзины
+Сумма - складывает цену всех предметов 
 О чем рассказать подробнее?)";
                 jres["response"]["buttons"][1]["title"] = u8"Выйти из помощи";
                 jres["response"]["buttons"][1]["payload"] = u8"Выйти из помощи";
@@ -298,6 +304,9 @@ void gen_response(const Request& req, Response& res) {
                     std::cout << "Error code: " << err << std::endl;
                 }
             }
+            else{
+            jres["response"]["text"] = u8"Введите команду корректно или нажмите на кнопку \"Помощь\" чтобы ознакомится с командами.";
+            }
         }
 
         if (j_users["tts"] == 1)
@@ -307,6 +316,7 @@ void gen_response(const Request& req, Response& res) {
         }
         else
         {
+            jres["response"]["tts"] = "sil <[500]>";
             jres["response"]["buttons"][0]["title"] = u8"Говорить";
             jres["response"]["buttons"][0]["payload"] = u8"Говорить";
         }

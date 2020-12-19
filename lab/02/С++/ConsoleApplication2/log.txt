@@ -312,3 +312,1259 @@
 server started
 
 server started
+{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [],
+  "tts": 1,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 1,
+    "session": {},
+    "sina": [],
+    "tts": 1,
+    "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 0,
+    "session": {},
+    "sina": [],
+    "tts": 1,
+    "value": 60
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [],
+  "tts": 1,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 0,
+    "session": {},
+    "sina": [
+        {
+            "item": "печенье ",
+            "price": "100 р"
+        }
+    ],
+    "tts": 1,
+    "value": 60
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [
+    {
+      "item": "печенье ",
+      "price": "100 р"
+    }
+  ],
+  "tts": 1,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 0,
+    "session": {},
+    "sina": [
+        {
+            "item": "печенье ",
+            "price": "100 р"
+        },
+        {
+            "item": "чай ",
+            "price": "100 р"
+        }
+    ],
+    "tts": 1,
+    "value": 60
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [
+    {
+      "item": "печенье ",
+      "price": "100 р"
+    },
+    {
+      "item": "чай ",
+      "price": "100 р"
+    }
+  ],
+  "tts": 1,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 0,
+    "session": {},
+    "sina": [
+        {
+            "item": "печенье ",
+            "price": "100 р"
+        },
+        {
+            "item": "чай ",
+            "price": "100 р"
+        },
+        {
+            "item": "мармеладные мишки ",
+            "price": "156 р"
+        }
+    ],
+    "tts": 1,
+    "value": 60
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [
+    {
+      "item": "печенье ",
+      "price": "100 р"
+    },
+    {
+      "item": "чай ",
+      "price": "100 р"
+    },
+    {
+      "item": "мармеладные мишки ",
+      "price": "156 р"
+    }
+  ],
+  "tts": 1,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 0,
+    "session": {},
+    "sina": [
+        {
+            "item": "печенье ",
+            "price": "100 р"
+        },
+        {
+            "item": "чай ",
+            "price": "100 р"
+        },
+        {
+            "item": "мармеладные мишки ",
+            "price": "156 р"
+        },
+        {
+            "item": "кофие ",
+            "price": "200 р"
+        }
+    ],
+    "tts": 1,
+    "value": 60
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [
+    {
+      "item": "печенье ",
+      "price": "100 р"
+    },
+    {
+      "item": "чай ",
+      "price": "100 р"
+    },
+    {
+      "item": "мармеладные мишки ",
+      "price": "156 р"
+    },
+    {
+      "item": "кофие ",
+      "price": "200 р"
+    }
+  ],
+  "tts": 1,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 0,
+    "session": {},
+    "sina": [
+        {
+            "item": "печенье ",
+            "price": "100 р"
+        },
+        {
+            "item": "чай ",
+            "price": "100 р"
+        },
+        {
+            "item": "мармеладные мишки ",
+            "price": "156 р"
+        },
+        {
+            "item": "кофие ",
+            "price": "200 р"
+        },
+        {
+            "item": "",
+            "price": "ноутбук 1000"
+        }
+    ],
+    "tts": 1,
+    "value": 60
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [
+    {
+      "item": "печенье ",
+      "price": "100 р"
+    },
+    {
+      "item": "чай ",
+      "price": "100 р"
+    },
+    {
+      "item": "мармеладные мишки ",
+      "price": "156 р"
+    },
+    {
+      "item": "кофие ",
+      "price": "200 р"
+    },
+    {
+      "item": "",
+      "price": "ноутбук 1000"
+    }
+  ],
+  "tts": 1,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 0,
+    "session": {},
+    "sina": [
+        {
+            "item": "печенье ",
+            "price": "100 р"
+        },
+        {
+            "item": "чай ",
+            "price": "100 р"
+        },
+        {
+            "item": "мармеладные мишки ",
+            "price": "156 р"
+        },
+        {
+            "item": "кофие ",
+            "price": "200 р"
+        },
+        {
+            "item": "",
+            "price": "ноутбук 1000"
+        },
+        {
+            "item": "rtx ",
+            "price": "несметные богатства"
+        }
+    ],
+    "tts": 1,
+    "value": 60
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [
+    {
+      "item": "печенье ",
+      "price": "100 р"
+    },
+    {
+      "item": "чай ",
+      "price": "100 р"
+    },
+    {
+      "item": "мармеладные мишки ",
+      "price": "156 р"
+    },
+    {
+      "item": "кофие ",
+      "price": "200 р"
+    },
+    {
+      "item": "",
+      "price": "ноутбук 1000"
+    },
+    {
+      "item": "rtx ",
+      "price": "несметные богатства"
+    }
+  ],
+  "tts": 1,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 0,
+    "session": {},
+    "sina": [
+        {
+            "item": "печенье ",
+            "price": "100 р"
+        },
+        {
+            "item": "чай ",
+            "price": "100 р"
+        },
+        {
+            "item": "мармеладные мишки ",
+            "price": "156 р"
+        },
+        {
+            "item": "кофие ",
+            "price": "200 р"
+        },
+        {
+            "item": "",
+            "price": "ноутбук 1000"
+        },
+        {
+            "item": "rtx ",
+            "price": "несметные богатства"
+        },
+        {
+            "item": "что то за ",
+            "price": "кого то"
+        }
+    ],
+    "tts": 1,
+    "value": 60
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [
+    {
+      "item": "печенье ",
+      "price": "100 р"
+    },
+    {
+      "item": "чай ",
+      "price": "100 р"
+    },
+    {
+      "item": "мармеладные мишки ",
+      "price": "156 р"
+    },
+    {
+      "item": "кофие ",
+      "price": "200 р"
+    },
+    {
+      "item": "",
+      "price": "ноутбук 1000"
+    },
+    {
+      "item": "rtx ",
+      "price": "несметные богатства"
+    },
+    {
+      "item": "что то за ",
+      "price": "кого то"
+    }
+  ],
+  "tts": 1,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 0,
+    "session": {},
+    "sina": [
+        {
+            "item": "печенье ",
+            "price": "100 р"
+        },
+        {
+            "item": "чай ",
+            "price": "100 р"
+        },
+        {
+            "item": "мармеладные мишки ",
+            "price": "156 р"
+        },
+        {
+            "item": "кофие ",
+            "price": "200 р"
+        },
+        {
+            "item": "",
+            "price": "ноутбук 1000"
+        },
+        {
+            "item": "rtx ",
+            "price": "несметные богатства"
+        },
+        {
+            "item": "что то за ",
+            "price": "кого то"
+        },
+        {
+            "item": "",
+            "price": "автомат пж"
+        }
+    ],
+    "tts": 1,
+    "value": 60
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [
+    {
+      "item": "печенье ",
+      "price": "100 р"
+    },
+    {
+      "item": "чай ",
+      "price": "100 р"
+    },
+    {
+      "item": "мармеладные мишки ",
+      "price": "156 р"
+    },
+    {
+      "item": "кофие ",
+      "price": "200 р"
+    },
+    {
+      "item": "",
+      "price": "ноутбук 1000"
+    },
+    {
+      "item": "rtx ",
+      "price": "несметные богатства"
+    },
+    {
+      "item": "что то за ",
+      "price": "кого то"
+    },
+    {
+      "item": "",
+      "price": "автомат пж"
+    }
+  ],
+  "tts": 1,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 0,
+    "session": {},
+    "sina": [
+        {
+            "item": "печенье ",
+            "price": "100 р"
+        },
+        {
+            "item": "чай ",
+            "price": "100 р"
+        },
+        {
+            "item": "мармеладные мишки ",
+            "price": "156 р"
+        },
+        {
+            "item": "кофие ",
+            "price": "200 р"
+        },
+        {
+            "item": "",
+            "price": "ноутбук 1000"
+        },
+        {
+            "item": "rtx ",
+            "price": "несметные богатства"
+        },
+        {
+            "item": "что то за ",
+            "price": "кого то"
+        },
+        {
+            "item": "",
+            "price": "автомат пж"
+        },
+        {
+            "item": "может ",
+            "price": "не надо"
+        }
+    ],
+    "tts": 1,
+    "value": 60
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [
+    {
+      "item": "печенье ",
+      "price": "100 р"
+    },
+    {
+      "item": "чай ",
+      "price": "100 р"
+    },
+    {
+      "item": "мармеладные мишки ",
+      "price": "156 р"
+    },
+    {
+      "item": "кофие ",
+      "price": "200 р"
+    },
+    {
+      "item": "",
+      "price": "ноутбук 1000"
+    },
+    {
+      "item": "rtx ",
+      "price": "несметные богатства"
+    },
+    {
+      "item": "что то за ",
+      "price": "кого то"
+    },
+    {
+      "item": "",
+      "price": "автомат пж"
+    },
+    {
+      "item": "может ",
+      "price": "не надо"
+    }
+  ],
+  "tts": 1,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 0,
+    "session": {},
+    "sina": [
+        {
+            "item": "печенье ",
+            "price": "100 р"
+        },
+        {
+            "item": "чай ",
+            "price": "100 р"
+        },
+        {
+            "item": "мармеладные мишки ",
+            "price": "156 р"
+        },
+        {
+            "item": "кофие ",
+            "price": "200 р"
+        },
+        {
+            "item": "",
+            "price": "ноутбук 1000"
+        },
+        {
+            "item": "rtx ",
+            "price": "несметные богатства"
+        },
+        {
+            "item": "что то за ",
+            "price": "кого то"
+        },
+        {
+            "item": "",
+            "price": "автомат пж"
+        },
+        {
+            "item": "может ",
+            "price": "не надо"
+        },
+        {
+            "item": "ладно ",
+            "price": "хоть это"
+        }
+    ],
+    "tts": 1,
+    "value": 60
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [
+    {
+      "item": "печенье ",
+      "price": "100 р"
+    },
+    {
+      "item": "чай ",
+      "price": "100 р"
+    },
+    {
+      "item": "мармеладные мишки ",
+      "price": "156 р"
+    },
+    {
+      "item": "кофие ",
+      "price": "200 р"
+    },
+    {
+      "item": "",
+      "price": "ноутбук 1000"
+    },
+    {
+      "item": "rtx ",
+      "price": "несметные богатства"
+    },
+    {
+      "item": "что то за ",
+      "price": "кого то"
+    },
+    {
+      "item": "",
+      "price": "автомат пж"
+    },
+    {
+      "item": "может ",
+      "price": "не надо"
+    },
+    {
+      "item": "ладно ",
+      "price": "хоть это"
+    }
+  ],
+  "tts": 1,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 0,
+    "session": {},
+    "sina": [
+        {
+            "item": "печенье ",
+            "price": "100 р"
+        },
+        {
+            "item": "чай ",
+            "price": "100 р"
+        },
+        {
+            "item": "мармеладные мишки ",
+            "price": "156 р"
+        },
+        {
+            "item": "кофие ",
+            "price": "200 р"
+        },
+        {
+            "item": "",
+            "price": "ноутбук 1000"
+        },
+        {
+            "item": "rtx ",
+            "price": "несметные богатства"
+        },
+        {
+            "item": "что то за ",
+            "price": "кого то"
+        },
+        {
+            "item": "",
+            "price": "автомат пж"
+        },
+        {
+            "item": "может ",
+            "price": "не надо"
+        },
+        {
+            "item": "ладно ",
+            "price": "хоть это"
+        },
+        {
+            "item": "слитки золота ",
+            "price": "200000 шекелей"
+        }
+    ],
+    "tts": 1,
+    "value": 60
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [
+    {
+      "item": "печенье ",
+      "price": "100 р"
+    },
+    {
+      "item": "чай ",
+      "price": "100 р"
+    },
+    {
+      "item": "мармеладные мишки ",
+      "price": "156 р"
+    },
+    {
+      "item": "кофие ",
+      "price": "200 р"
+    },
+    {
+      "item": "",
+      "price": "ноутбук 1000"
+    },
+    {
+      "item": "rtx ",
+      "price": "несметные богатства"
+    },
+    {
+      "item": "что то за ",
+      "price": "кого то"
+    },
+    {
+      "item": "",
+      "price": "автомат пж"
+    },
+    {
+      "item": "может ",
+      "price": "не надо"
+    },
+    {
+      "item": "ладно ",
+      "price": "хоть это"
+    },
+    {
+      "item": "слитки золота ",
+      "price": "200000 шекелей"
+    }
+  ],
+  "tts": 1,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 0,
+    "session": {},
+    "sina": [
+        {
+            "item": "печенье ",
+            "price": "100 р"
+        },
+        {
+            "item": "чай ",
+            "price": "100 р"
+        },
+        {
+            "item": "мармеладные мишки ",
+            "price": "156 р"
+        },
+        {
+            "item": "кофие ",
+            "price": "200 р"
+        },
+        {
+            "item": "",
+            "price": "ноутбук 1000"
+        },
+        {
+            "item": "rtx ",
+            "price": "несметные богатства"
+        },
+        {
+            "item": "что то за ",
+            "price": "кого то"
+        },
+        {
+            "item": "",
+            "price": "автомат пж"
+        },
+        {
+            "item": "может ",
+            "price": "не надо"
+        },
+        {
+            "item": "ладно ",
+            "price": "хоть это"
+        },
+        {
+            "item": "слитки золота ",
+            "price": "200000 шекелей"
+        }
+    ],
+    "tts": 1,
+    "value": 60
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}
+server started
+{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}
+server started
+{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}
+server started
+{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}
+server started
+{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}
+server started

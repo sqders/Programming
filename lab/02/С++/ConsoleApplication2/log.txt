@@ -1568,3 +1568,532 @@ server started
     "tts": 1
 }
 server started
+{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}
+server started
+
+server started
+
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [],
+  "tts": 1,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 0,
+    "session": {},
+    "sina": [],
+    "tts": 0,
+    "value": 60
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [],
+  "tts": 0,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 0,
+    "session": {},
+    "sina": [],
+    "tts": 0,
+    "value": 60
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [],
+  "tts": 0,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 0,
+    "session": {},
+    "sina": [],
+    "tts": 0,
+    "value": 60
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [],
+  "tts": 0,
+  "value": 60
+}
+2
+{
+    "application": {
+        "value": 37
+    },
+    "mode": 0,
+    "session": {},
+    "sina": [],
+    "tts": 0,
+    "value": 60
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{"webhooks":["https://www.twitch.tv/silvername","http://018c6a3db8c2.ngrok.io"]}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 1,
+    "sina": [],
+    "tts": 1
+}
+2
+{
+    "mode": 1,
+    "sina": [],
+    "tts": 1
+}
+2
+{
+    "mode": 1,
+    "sina": [],
+    "tts": 1
+}
+2
+{
+    "mode": 1,
+    "sina": [],
+    "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [
+        {
+            "item": "помидор ",
+            "price": "1 р"
+        }
+    ],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [
+    {
+      "item": "помидор ",
+      "price": "1 р"
+    }
+  ],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [
+        {
+            "item": "помидор ",
+            "price": "1 р"
+        }
+    ],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [
+    {
+      "item": "помидор ",
+      "price": "1 р"
+    }
+  ],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [
+        {
+            "item": "помидор ",
+            "price": "1 р"
+        },
+        {
+            "item": "белый кит ",
+            "price": "10 р"
+        }
+    ],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [
+    {
+      "item": "помидор ",
+      "price": "1 р"
+    },
+    {
+      "item": "белый кит ",
+      "price": "10 р"
+    }
+  ],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [
+        {
+            "item": "помидор ",
+            "price": "1 р"
+        },
+        {
+            "item": "белый кит ",
+            "price": "10 р"
+        }
+    ],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [
+    {
+      "item": "помидор ",
+      "price": "1 р"
+    },
+    {
+      "item": "белый кит ",
+      "price": "10 р"
+    }
+  ],
+  "tts": 1
+}[{"item":"белый кит ","price":"10 р"}
+
+2
+{
+    "mode": 0,
+    "sina": [
+        {
+            "item": "белый кит ",
+            "price": "10 р"
+        }
+    ],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [
+    {
+      "item": "белый кит ",
+      "price": "10 р"
+    }
+  ],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [
+        {
+            "item": "белый кит ",
+            "price": "10 р"
+        }
+    ],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [
+    {
+      "item": "белый кит ",
+      "price": "10 р"
+    }
+  ],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [
+        {
+            "item": "белый кит ",
+            "price": "10 р"
+        },
+        {
+            "item": "огурец ",
+            "price": "50 р"
+        }
+    ],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [
+    {
+      "item": "белый кит ",
+      "price": "10 р"
+    },
+    {
+      "item": "огурец ",
+      "price": "50 р"
+    }
+  ],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [
+        {
+            "item": "белый кит ",
+            "price": "10 р"
+        },
+        {
+            "item": "огурец ",
+            "price": "50 р"
+        }
+    ],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [
+    {
+      "item": "белый кит ",
+      "price": "10 р"
+    },
+    {
+      "item": "огурец ",
+      "price": "50 р"
+    }
+  ],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [
+        {
+            "item": "белый кит ",
+            "price": "10 р"
+        },
+        {
+            "item": "огурец ",
+            "price": "50 р"
+        }
+    ],
+    "tts": 1
+}{"webhooks":["https://www.twitch.tv/silvername","http://018c6a3db8c2.ngrok.io","http://018c6a3db8c2.ngrok.io/"]}{"webhooks":["https://www.twitch.tv/silvername","http://018c6a3db8c2.ngrok.io/"]}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [
+        {
+            "item": "помидор ",
+            "price": "10 р"
+        }
+    ],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [
+    {
+      "item": "помидор ",
+      "price": "10 р"
+    }
+  ],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [
+        {
+            "item": "помидор ",
+            "price": "10 р"
+        },
+        {
+            "item": "огурцы ",
+            "price": "50 р"
+        }
+    ],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [
+    {
+      "item": "помидор ",
+      "price": "10 р"
+    },
+    {
+      "item": "огурцы ",
+      "price": "50 р"
+    }
+  ],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [
+        {
+            "item": "помидор ",
+            "price": "10 р"
+        },
+        {
+            "item": "огурцы ",
+            "price": "50 р"
+        }
+    ],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [
+    {
+      "item": "помидор ",
+      "price": "10 р"
+    },
+    {
+      "item": "огурцы ",
+      "price": "50 р"
+    }
+  ],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [
+        {
+            "item": "помидор ",
+            "price": "10 р"
+        },
+        {
+            "item": "огурцы ",
+            "price": "50 р"
+        }
+    ],
+    "tts": 1
+}{
+  "mode": 0,
+  "sina": [
+    {
+      "item": "помидор ",
+      "price": "10 р"
+    },
+    {
+      "item": "огурцы ",
+      "price": "50 р"
+    }
+  ],
+  "tts": 1
+}
+2
+{
+    "mode": 0,
+    "sina": [
+        {
+            "item": "помидор ",
+            "price": "10 р"
+        },
+        {
+            "item": "огурцы ",
+            "price": "50 р"
+        }
+    ],
+    "tts": 1
+}
+server started

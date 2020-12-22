@@ -96,7 +96,7 @@ void gen_response(const Request& req, Response& res) {
         else
         {
             j_users = jreq["state"]["user"];
-        }
+       
         if (j_users["mode"] == 1)
         {
             if (jreq["request"]["command"] == "" && jreq["request"]["original_utterance"] == "ping" && jreq["requset"]["type"] == "SimpleUtterance")
@@ -306,7 +306,8 @@ void gen_response(const Request& req, Response& res) {
             }
             else{
             jres["response"]["text"] = u8"Введите команду корректно или нажмите на кнопку \"Помощь\" чтобы ознакомится с командами.";
-            }
+                }
+            } 
         }
 
         if (j_users["tts"] == 1)

@@ -69,7 +69,7 @@
 ### 4. Серверное приложение
 Для запуска сервера, был использован язык C++, а также сторонние библиотеки: httplib (для работы с HTTP-клиентом и HTTP-сервером), JSON for Modern C++ (позволяет работать с JSON-файлами). Если приходит запрос на "/", сервер формирует и отправляет html-виджет, если же запрос приходит на "/raw", сервер формирует и отправляет json-файл с данными о текущей температуре и состоянии погоды.
 
-Ссылка: https://github.com/sqders/Programming/tree/master/Lab/01/ConsoleApplication1
+Ссылка: https://github.com/sqders/Programming/blob/master/lab/01/ConsoleApplication1/ConsoleApplication1.cpp
 
 ### 5. Клиентское приложение
 Для создания клиентского приложения использовался язык Python. Использовал библиотеки requests

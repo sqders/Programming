@@ -1,8 +1,4 @@
-{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
+{"webhooks":["https://www.twitch.tv/silvername","http://018c6a3db8c2.ngrok.io/"]}
 2
 {
     "mode": 0,
@@ -48,275 +44,11 @@
     "sina": [],
     "tts": 1,
     "value": 60
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
 }
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "application": {
-    "value": 37
-  },
-  "mode": 0,
-  "session": {},
-  "sina": [],
-  "tts": 1,
-  "value": 60
-}
-2
-{
-    "application": {
-        "value": 37
-    },
-    "mode": 0,
-    "session": {},
-    "sina": [],
-    "tts": 1,
-    "value": 60
-}{
-  "application": {
-    "value": 37
-  },
-  "mode": 0,
-  "session": {},
-  "sina": [],
-  "tts": 1,
-  "value": 60
-}
-2
-{
-    "application": {
-        "value": 37
-    },
-    "mode": 0,
-    "session": {},
-    "sina": [
-        {
-            "item": "чай ",
-            "price": "100 р"
-        }
-    ],
-    "tts": 1,
-    "value": 60
-}{
-  "application": {
-    "value": 37
-  },
-  "mode": 0,
-  "session": {},
-  "sina": [
-    {
-      "item": "чай ",
-      "price": "100 р"
-    }
-  ],
-  "tts": 1,
-  "value": 60
-}
-2
-{
-    "application": {
-        "value": 37
-    },
-    "mode": 0,
-    "session": {},
-    "sina": [
-        {
-            "item": "чай ",
-            "price": "100 р"
-        }
-    ],
-    "tts": 1,
-    "value": 60
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "application": {
-    "value": 37
-  },
-  "mode": 0,
-  "session": {},
-  "sina": [],
-  "tts": 1,
-  "value": 60
-}
-2
-{
-    "application": {
-        "value": 37
-    },
-    "mode": 0,
-    "session": {},
-    "sina": [],
-    "tts": 1,
-    "value": 60
-}{
-  "application": {
-    "value": 37
-  },
-  "mode": 0,
-  "session": {},
-  "sina": [],
-  "tts": 1,
-  "value": 60
-}
-2
-{
-    "application": {
-        "value": 37
-    },
-    "mode": 0,
-    "session": {},
-    "sina": [
-        {
-            "item": "чай ",
-            "price": "200 р"
-        }
-    ],
-    "tts": 1,
-    "value": 60
-}{
-  "application": {
-    "value": 37
-  },
-  "mode": 0,
-  "session": {},
-  "sina": [
-    {
-      "item": "чай ",
-      "price": "200 р"
-    }
-  ],
-  "tts": 1,
-  "value": 60
-}
-2
-{
-    "application": {
-        "value": 37
-    },
-    "mode": 0,
-    "session": {},
-    "sina": [
-        {
-            "item": "чай ",
-            "price": "200 р"
-        }
-    ],
-    "tts": 1,
-    "value": 60
-}{
-  "application": {
-    "value": 37
-  },
-  "mode": 0,
-  "session": {},
-  "sina": [
-    {
-      "item": "чай ",
-      "price": "200 р"
-    }
-  ],
-  "tts": 1,
-  "value": 60
-}
-2
-{
-    "application": {
-        "value": 37
-    },
-    "mode": 0,
-    "session": {},
-    "sina": [
-        {
-            "item": "чай ",
-            "price": "200 р"
-        }
-    ],
-    "tts": 1,
-    "value": 60
-}{
-  "application": {
-    "value": 37
-  },
-  "mode": 0,
-  "session": {},
-  "sina": [
-    {
-      "item": "чай ",
-      "price": "200 р"
-    }
-  ],
-  "tts": 1,
-  "value": 60
-}
-2
-{
-    "application": {
-        "value": 37
-    },
-    "mode": 1,
-    "session": {},
-    "sina": [
-        {
-            "item": "чай ",
-            "price": "200 р"
-        }
-    ],
-    "tts": 1,
-    "value": 60
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "application": {
-    "value": 37
-  },
-  "mode": 0,
-  "session": {},
-  "sina": [],
-  "tts": 1,
-  "value": 60
-}
-2
-{
-    "application": {
-        "value": 37
-    },
-    "mode": 1,
-    "session": {},
-    "sina": [],
-    "tts": 1,
-    "value": 60
-}{"webhooks":["https://www.twitch.tv/silvername"]}
 server started
 
 server started
-{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
+{"webhooks":["https://www.twitch.tv/silvername"]}{"webhooks":["https://www.twitch.tv/silvername","https://webhook.site/a4baee1f-2307-419d-bf03-045b4b1a46aa"]}
 2
 {
     "mode": 0,
@@ -331,18 +63,7 @@ server started
   "sina": [],
   "tts": 1,
   "value": 60
-}
-2
-{
-    "application": {
-        "value": 37
-    },
-    "mode": 1,
-    "session": {},
-    "sina": [],
-    "tts": 1,
-    "value": 60
-}
+}"https://www.twitch.tv/silvername","https://webhook.site/a4baee1f-2307-419d-bf03-045b4b1a46aa",
 2
 {
     "application": {
@@ -353,1234 +74,7 @@ server started
     "sina": [],
     "tts": 1,
     "value": 60
-}{
-  "application": {
-    "value": 37
-  },
-  "mode": 0,
-  "session": {},
-  "sina": [],
-  "tts": 1,
-  "value": 60
 }
-2
-{
-    "application": {
-        "value": 37
-    },
-    "mode": 0,
-    "session": {},
-    "sina": [
-        {
-            "item": "печенье ",
-            "price": "100 р"
-        }
-    ],
-    "tts": 1,
-    "value": 60
-}{
-  "application": {
-    "value": 37
-  },
-  "mode": 0,
-  "session": {},
-  "sina": [
-    {
-      "item": "печенье ",
-      "price": "100 р"
-    }
-  ],
-  "tts": 1,
-  "value": 60
-}
-2
-{
-    "application": {
-        "value": 37
-    },
-    "mode": 0,
-    "session": {},
-    "sina": [
-        {
-            "item": "печенье ",
-            "price": "100 р"
-        },
-        {
-            "item": "чай ",
-            "price": "100 р"
-        }
-    ],
-    "tts": 1,
-    "value": 60
-}{
-  "application": {
-    "value": 37
-  },
-  "mode": 0,
-  "session": {},
-  "sina": [
-    {
-      "item": "печенье ",
-      "price": "100 р"
-    },
-    {
-      "item": "чай ",
-      "price": "100 р"
-    }
-  ],
-  "tts": 1,
-  "value": 60
-}
-2
-{
-    "application": {
-        "value": 37
-    },
-    "mode": 0,
-    "session": {},
-    "sina": [
-        {
-            "item": "печенье ",
-            "price": "100 р"
-        },
-        {
-            "item": "чай ",
-            "price": "100 р"
-        },
-        {
-            "item": "мармеладные мишки ",
-            "price": "156 р"
-        }
-    ],
-    "tts": 1,
-    "value": 60
-}{
-  "application": {
-    "value": 37
-  },
-  "mode": 0,
-  "session": {},
-  "sina": [
-    {
-      "item": "печенье ",
-      "price": "100 р"
-    },
-    {
-      "item": "чай ",
-      "price": "100 р"
-    },
-    {
-      "item": "мармеладные мишки ",
-      "price": "156 р"
-    }
-  ],
-  "tts": 1,
-  "value": 60
-}
-2
-{
-    "application": {
-        "value": 37
-    },
-    "mode": 0,
-    "session": {},
-    "sina": [
-        {
-            "item": "печенье ",
-            "price": "100 р"
-        },
-        {
-            "item": "чай ",
-            "price": "100 р"
-        },
-        {
-            "item": "мармеладные мишки ",
-            "price": "156 р"
-        },
-        {
-            "item": "кофие ",
-            "price": "200 р"
-        }
-    ],
-    "tts": 1,
-    "value": 60
-}{
-  "application": {
-    "value": 37
-  },
-  "mode": 0,
-  "session": {},
-  "sina": [
-    {
-      "item": "печенье ",
-      "price": "100 р"
-    },
-    {
-      "item": "чай ",
-      "price": "100 р"
-    },
-    {
-      "item": "мармеладные мишки ",
-      "price": "156 р"
-    },
-    {
-      "item": "кофие ",
-      "price": "200 р"
-    }
-  ],
-  "tts": 1,
-  "value": 60
-}
-2
-{
-    "application": {
-        "value": 37
-    },
-    "mode": 0,
-    "session": {},
-    "sina": [
-        {
-            "item": "печенье ",
-            "price": "100 р"
-        },
-        {
-            "item": "чай ",
-            "price": "100 р"
-        },
-        {
-            "item": "мармеладные мишки ",
-            "price": "156 р"
-        },
-        {
-            "item": "кофие ",
-            "price": "200 р"
-        },
-        {
-            "item": "",
-            "price": "ноутбук 1000"
-        }
-    ],
-    "tts": 1,
-    "value": 60
-}{
-  "application": {
-    "value": 37
-  },
-  "mode": 0,
-  "session": {},
-  "sina": [
-    {
-      "item": "печенье ",
-      "price": "100 р"
-    },
-    {
-      "item": "чай ",
-      "price": "100 р"
-    },
-    {
-      "item": "мармеладные мишки ",
-      "price": "156 р"
-    },
-    {
-      "item": "кофие ",
-      "price": "200 р"
-    },
-    {
-      "item": "",
-      "price": "ноутбук 1000"
-    }
-  ],
-  "tts": 1,
-  "value": 60
-}
-2
-{
-    "application": {
-        "value": 37
-    },
-    "mode": 0,
-    "session": {},
-    "sina": [
-        {
-            "item": "печенье ",
-            "price": "100 р"
-        },
-        {
-            "item": "чай ",
-            "price": "100 р"
-        },
-        {
-            "item": "мармеладные мишки ",
-            "price": "156 р"
-        },
-        {
-            "item": "кофие ",
-            "price": "200 р"
-        },
-        {
-            "item": "",
-            "price": "ноутбук 1000"
-        },
-        {
-            "item": "rtx ",
-            "price": "несметные богатства"
-        }
-    ],
-    "tts": 1,
-    "value": 60
-}{
-  "application": {
-    "value": 37
-  },
-  "mode": 0,
-  "session": {},
-  "sina": [
-    {
-      "item": "печенье ",
-      "price": "100 р"
-    },
-    {
-      "item": "чай ",
-      "price": "100 р"
-    },
-    {
-      "item": "мармеладные мишки ",
-      "price": "156 р"
-    },
-    {
-      "item": "кофие ",
-      "price": "200 р"
-    },
-    {
-      "item": "",
-      "price": "ноутбук 1000"
-    },
-    {
-      "item": "rtx ",
-      "price": "несметные богатства"
-    }
-  ],
-  "tts": 1,
-  "value": 60
-}
-2
-{
-    "application": {
-        "value": 37
-    },
-    "mode": 0,
-    "session": {},
-    "sina": [
-        {
-            "item": "печенье ",
-            "price": "100 р"
-        },
-        {
-            "item": "чай ",
-            "price": "100 р"
-        },
-        {
-            "item": "мармеладные мишки ",
-            "price": "156 р"
-        },
-        {
-            "item": "кофие ",
-            "price": "200 р"
-        },
-        {
-            "item": "",
-            "price": "ноутбук 1000"
-        },
-        {
-            "item": "rtx ",
-            "price": "несметные богатства"
-        },
-        {
-            "item": "что то за ",
-            "price": "кого то"
-        }
-    ],
-    "tts": 1,
-    "value": 60
-}{
-  "application": {
-    "value": 37
-  },
-  "mode": 0,
-  "session": {},
-  "sina": [
-    {
-      "item": "печенье ",
-      "price": "100 р"
-    },
-    {
-      "item": "чай ",
-      "price": "100 р"
-    },
-    {
-      "item": "мармеладные мишки ",
-      "price": "156 р"
-    },
-    {
-      "item": "кофие ",
-      "price": "200 р"
-    },
-    {
-      "item": "",
-      "price": "ноутбук 1000"
-    },
-    {
-      "item": "rtx ",
-      "price": "несметные богатства"
-    },
-    {
-      "item": "что то за ",
-      "price": "кого то"
-    }
-  ],
-  "tts": 1,
-  "value": 60
-}
-2
-{
-    "application": {
-        "value": 37
-    },
-    "mode": 0,
-    "session": {},
-    "sina": [
-        {
-            "item": "печенье ",
-            "price": "100 р"
-        },
-        {
-            "item": "чай ",
-            "price": "100 р"
-        },
-        {
-            "item": "мармеладные мишки ",
-            "price": "156 р"
-        },
-        {
-            "item": "кофие ",
-            "price": "200 р"
-        },
-        {
-            "item": "",
-            "price": "ноутбук 1000"
-        },
-        {
-            "item": "rtx ",
-            "price": "несметные богатства"
-        },
-        {
-            "item": "что то за ",
-            "price": "кого то"
-        },
-        {
-            "item": "",
-            "price": "автомат пж"
-        }
-    ],
-    "tts": 1,
-    "value": 60
-}{
-  "application": {
-    "value": 37
-  },
-  "mode": 0,
-  "session": {},
-  "sina": [
-    {
-      "item": "печенье ",
-      "price": "100 р"
-    },
-    {
-      "item": "чай ",
-      "price": "100 р"
-    },
-    {
-      "item": "мармеладные мишки ",
-      "price": "156 р"
-    },
-    {
-      "item": "кофие ",
-      "price": "200 р"
-    },
-    {
-      "item": "",
-      "price": "ноутбук 1000"
-    },
-    {
-      "item": "rtx ",
-      "price": "несметные богатства"
-    },
-    {
-      "item": "что то за ",
-      "price": "кого то"
-    },
-    {
-      "item": "",
-      "price": "автомат пж"
-    }
-  ],
-  "tts": 1,
-  "value": 60
-}
-2
-{
-    "application": {
-        "value": 37
-    },
-    "mode": 0,
-    "session": {},
-    "sina": [
-        {
-            "item": "печенье ",
-            "price": "100 р"
-        },
-        {
-            "item": "чай ",
-            "price": "100 р"
-        },
-        {
-            "item": "мармеладные мишки ",
-            "price": "156 р"
-        },
-        {
-            "item": "кофие ",
-            "price": "200 р"
-        },
-        {
-            "item": "",
-            "price": "ноутбук 1000"
-        },
-        {
-            "item": "rtx ",
-            "price": "несметные богатства"
-        },
-        {
-            "item": "что то за ",
-            "price": "кого то"
-        },
-        {
-            "item": "",
-            "price": "автомат пж"
-        },
-        {
-            "item": "может ",
-            "price": "не надо"
-        }
-    ],
-    "tts": 1,
-    "value": 60
-}{
-  "application": {
-    "value": 37
-  },
-  "mode": 0,
-  "session": {},
-  "sina": [
-    {
-      "item": "печенье ",
-      "price": "100 р"
-    },
-    {
-      "item": "чай ",
-      "price": "100 р"
-    },
-    {
-      "item": "мармеладные мишки ",
-      "price": "156 р"
-    },
-    {
-      "item": "кофие ",
-      "price": "200 р"
-    },
-    {
-      "item": "",
-      "price": "ноутбук 1000"
-    },
-    {
-      "item": "rtx ",
-      "price": "несметные богатства"
-    },
-    {
-      "item": "что то за ",
-      "price": "кого то"
-    },
-    {
-      "item": "",
-      "price": "автомат пж"
-    },
-    {
-      "item": "может ",
-      "price": "не надо"
-    }
-  ],
-  "tts": 1,
-  "value": 60
-}
-2
-{
-    "application": {
-        "value": 37
-    },
-    "mode": 0,
-    "session": {},
-    "sina": [
-        {
-            "item": "печенье ",
-            "price": "100 р"
-        },
-        {
-            "item": "чай ",
-            "price": "100 р"
-        },
-        {
-            "item": "мармеладные мишки ",
-            "price": "156 р"
-        },
-        {
-            "item": "кофие ",
-            "price": "200 р"
-        },
-        {
-            "item": "",
-            "price": "ноутбук 1000"
-        },
-        {
-            "item": "rtx ",
-            "price": "несметные богатства"
-        },
-        {
-            "item": "что то за ",
-            "price": "кого то"
-        },
-        {
-            "item": "",
-            "price": "автомат пж"
-        },
-        {
-            "item": "может ",
-            "price": "не надо"
-        },
-        {
-            "item": "ладно ",
-            "price": "хоть это"
-        }
-    ],
-    "tts": 1,
-    "value": 60
-}{
-  "application": {
-    "value": 37
-  },
-  "mode": 0,
-  "session": {},
-  "sina": [
-    {
-      "item": "печенье ",
-      "price": "100 р"
-    },
-    {
-      "item": "чай ",
-      "price": "100 р"
-    },
-    {
-      "item": "мармеладные мишки ",
-      "price": "156 р"
-    },
-    {
-      "item": "кофие ",
-      "price": "200 р"
-    },
-    {
-      "item": "",
-      "price": "ноутбук 1000"
-    },
-    {
-      "item": "rtx ",
-      "price": "несметные богатства"
-    },
-    {
-      "item": "что то за ",
-      "price": "кого то"
-    },
-    {
-      "item": "",
-      "price": "автомат пж"
-    },
-    {
-      "item": "может ",
-      "price": "не надо"
-    },
-    {
-      "item": "ладно ",
-      "price": "хоть это"
-    }
-  ],
-  "tts": 1,
-  "value": 60
-}
-2
-{
-    "application": {
-        "value": 37
-    },
-    "mode": 0,
-    "session": {},
-    "sina": [
-        {
-            "item": "печенье ",
-            "price": "100 р"
-        },
-        {
-            "item": "чай ",
-            "price": "100 р"
-        },
-        {
-            "item": "мармеладные мишки ",
-            "price": "156 р"
-        },
-        {
-            "item": "кофие ",
-            "price": "200 р"
-        },
-        {
-            "item": "",
-            "price": "ноутбук 1000"
-        },
-        {
-            "item": "rtx ",
-            "price": "несметные богатства"
-        },
-        {
-            "item": "что то за ",
-            "price": "кого то"
-        },
-        {
-            "item": "",
-            "price": "автомат пж"
-        },
-        {
-            "item": "может ",
-            "price": "не надо"
-        },
-        {
-            "item": "ладно ",
-            "price": "хоть это"
-        },
-        {
-            "item": "слитки золота ",
-            "price": "200000 шекелей"
-        }
-    ],
-    "tts": 1,
-    "value": 60
-}{
-  "application": {
-    "value": 37
-  },
-  "mode": 0,
-  "session": {},
-  "sina": [
-    {
-      "item": "печенье ",
-      "price": "100 р"
-    },
-    {
-      "item": "чай ",
-      "price": "100 р"
-    },
-    {
-      "item": "мармеладные мишки ",
-      "price": "156 р"
-    },
-    {
-      "item": "кофие ",
-      "price": "200 р"
-    },
-    {
-      "item": "",
-      "price": "ноутбук 1000"
-    },
-    {
-      "item": "rtx ",
-      "price": "несметные богатства"
-    },
-    {
-      "item": "что то за ",
-      "price": "кого то"
-    },
-    {
-      "item": "",
-      "price": "автомат пж"
-    },
-    {
-      "item": "может ",
-      "price": "не надо"
-    },
-    {
-      "item": "ладно ",
-      "price": "хоть это"
-    },
-    {
-      "item": "слитки золота ",
-      "price": "200000 шекелей"
-    }
-  ],
-  "tts": 1,
-  "value": 60
-}
-2
-{
-    "application": {
-        "value": 37
-    },
-    "mode": 0,
-    "session": {},
-    "sina": [
-        {
-            "item": "печенье ",
-            "price": "100 р"
-        },
-        {
-            "item": "чай ",
-            "price": "100 р"
-        },
-        {
-            "item": "мармеладные мишки ",
-            "price": "156 р"
-        },
-        {
-            "item": "кофие ",
-            "price": "200 р"
-        },
-        {
-            "item": "",
-            "price": "ноутбук 1000"
-        },
-        {
-            "item": "rtx ",
-            "price": "несметные богатства"
-        },
-        {
-            "item": "что то за ",
-            "price": "кого то"
-        },
-        {
-            "item": "",
-            "price": "автомат пж"
-        },
-        {
-            "item": "может ",
-            "price": "не надо"
-        },
-        {
-            "item": "ладно ",
-            "price": "хоть это"
-        },
-        {
-            "item": "слитки золота ",
-            "price": "200000 шекелей"
-        }
-    ],
-    "tts": 1,
-    "value": 60
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}
-server started
-{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}
-server started
-{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}
-server started
-{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}
-server started
-{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}
-server started
-{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}
-server started
-
 server started
 
 2
@@ -1588,12 +82,48 @@ server started
     "mode": 0,
     "sina": [],
     "tts": 1
-}
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [],
+  "tts": 1,
+  "value": 60
+}https://www.twitch.tv/silvername,https://webhook.site/a4baee1f-2307-419d-bf03-045b4b1a46aa,
 2
 {
+    "application": {
+        "value": 37
+    },
     "mode": 0,
+    "session": {},
     "sina": [],
-    "tts": 1
+    "tts": 1,
+    "value": 60
+}
+server started
+{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [],
+  "tts": 1,
+  "value": 60
+}https://www.twitch.tv/silvernamehttps://webhook.site/a4baee1f-2307-419d-bf03-045b4b1a46aa
+server started
+{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [],
+  "tts": 1,
+  "value": 60
 }{
   "application": {
     "value": 37
@@ -1604,16 +134,16 @@ server started
   "tts": 1,
   "value": 60
 }
-2
+server started
 {
-    "application": {
-        "value": 37
-    },
-    "mode": 0,
-    "session": {},
-    "sina": [],
-    "tts": 0,
-    "value": 60
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [],
+  "tts": 1,
+  "value": 60
 }{
   "application": {
     "value": 37
@@ -1621,19 +151,8 @@ server started
   "mode": 0,
   "session": {},
   "sina": [],
-  "tts": 0,
+  "tts": 1,
   "value": 60
-}
-2
-{
-    "application": {
-        "value": 37
-    },
-    "mode": 0,
-    "session": {},
-    "sina": [],
-    "tts": 0,
-    "value": 60
 }{
   "application": {
     "value": 37
@@ -1641,19 +160,19 @@ server started
   "mode": 0,
   "session": {},
   "sina": [],
-  "tts": 0,
+  "tts": 1,
   "value": 60
 }
-2
+server started
 {
-    "application": {
-        "value": 37
-    },
-    "mode": 0,
-    "session": {},
-    "sina": [],
-    "tts": 0,
-    "value": 60
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [],
+  "tts": 1,
+  "value": 60
 }{
   "application": {
     "value": 37
@@ -1661,439 +180,128 @@ server started
   "mode": 0,
   "session": {},
   "sina": [],
-  "tts": 0,
+  "tts": 1,
+  "value": 60
+}{
+  "application": {
+    "value": 37
+  },
+  "mode": 0,
+  "session": {},
+  "sina": [],
+  "tts": 1,
   "value": 60
 }
-2
+server started
 {
-    "application": {
-        "value": 37
-    },
-    "mode": 0,
-    "session": {},
-    "sina": [],
-    "tts": 0,
-    "value": 60
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{"webhooks":["https://www.twitch.tv/silvername","http://018c6a3db8c2.ngrok.io"]}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
+  "application": {
+    "value": 37
+  },
   "mode": 0,
+  "session": {},
   "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 1,
-    "sina": [],
-    "tts": 1
-}
-2
-{
-    "mode": 1,
-    "sina": [],
-    "tts": 1
-}
-2
-{
-    "mode": 1,
-    "sina": [],
-    "tts": 1
-}
-2
-{
-    "mode": 1,
-    "sina": [],
-    "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
+  "tts": 1,
+  "value": 60
+}-1{
+  "application": {
+    "value": 37
+  },
   "mode": 0,
+  "session": {},
   "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [
-        {
-            "item": "помидор ",
-            "price": "1 р"
-        }
-    ],
-    "tts": 1
+  "tts": 1,
+  "value": 60
 }{
+  "application": {
+    "value": 37
+  },
   "mode": 0,
-  "sina": [
-    {
-      "item": "помидор ",
-      "price": "1 р"
-    }
-  ],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [
-        {
-            "item": "помидор ",
-            "price": "1 р"
-        }
-    ],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [
-    {
-      "item": "помидор ",
-      "price": "1 р"
-    }
-  ],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [
-        {
-            "item": "помидор ",
-            "price": "1 р"
-        },
-        {
-            "item": "белый кит ",
-            "price": "10 р"
-        }
-    ],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [
-    {
-      "item": "помидор ",
-      "price": "1 р"
-    },
-    {
-      "item": "белый кит ",
-      "price": "10 р"
-    }
-  ],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [
-        {
-            "item": "помидор ",
-            "price": "1 р"
-        },
-        {
-            "item": "белый кит ",
-            "price": "10 р"
-        }
-    ],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [
-    {
-      "item": "помидор ",
-      "price": "1 р"
-    },
-    {
-      "item": "белый кит ",
-      "price": "10 р"
-    }
-  ],
-  "tts": 1
-}[{"item":"белый кит ","price":"10 р"}
+  "session": {},
+  "sina": [],
+  "tts": 1,
+  "value": 60
+}-1
+server started
 
-2
-{
-    "mode": 0,
-    "sina": [
-        {
-            "item": "белый кит ",
-            "price": "10 р"
-        }
-    ],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [
-    {
-      "item": "белый кит ",
-      "price": "10 р"
-    }
-  ],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [
-        {
-            "item": "белый кит ",
-            "price": "10 р"
-        }
-    ],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [
-    {
-      "item": "белый кит ",
-      "price": "10 р"
-    }
-  ],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [
-        {
-            "item": "белый кит ",
-            "price": "10 р"
-        },
-        {
-            "item": "огурец ",
-            "price": "50 р"
-        }
-    ],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [
-    {
-      "item": "белый кит ",
-      "price": "10 р"
-    },
-    {
-      "item": "огурец ",
-      "price": "50 р"
-    }
-  ],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [
-        {
-            "item": "белый кит ",
-            "price": "10 р"
-        },
-        {
-            "item": "огурец ",
-            "price": "50 р"
-        }
-    ],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [
-    {
-      "item": "белый кит ",
-      "price": "10 р"
-    },
-    {
-      "item": "огурец ",
-      "price": "50 р"
-    }
-  ],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [
-        {
-            "item": "белый кит ",
-            "price": "10 р"
-        },
-        {
-            "item": "огурец ",
-            "price": "50 р"
-        }
-    ],
-    "tts": 1
-}{"webhooks":["https://www.twitch.tv/silvername","http://018c6a3db8c2.ngrok.io","http://018c6a3db8c2.ngrok.io/"]}{"webhooks":["https://www.twitch.tv/silvername","http://018c6a3db8c2.ngrok.io/"]}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [
-        {
-            "item": "помидор ",
-            "price": "10 р"
-        }
-    ],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [
-    {
-      "item": "помидор ",
-      "price": "10 р"
-    }
-  ],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [
-        {
-            "item": "помидор ",
-            "price": "10 р"
-        },
-        {
-            "item": "огурцы ",
-            "price": "50 р"
-        }
-    ],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [
-    {
-      "item": "помидор ",
-      "price": "10 р"
-    },
-    {
-      "item": "огурцы ",
-      "price": "50 р"
-    }
-  ],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [
-        {
-            "item": "помидор ",
-            "price": "10 р"
-        },
-        {
-            "item": "огурцы ",
-            "price": "50 р"
-        }
-    ],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [
-    {
-      "item": "помидор ",
-      "price": "10 р"
-    },
-    {
-      "item": "огурцы ",
-      "price": "50 р"
-    }
-  ],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [
-        {
-            "item": "помидор ",
-            "price": "10 р"
-        },
-        {
-            "item": "огурцы ",
-            "price": "50 р"
-        }
-    ],
-    "tts": 1
-}{
-  "mode": 0,
-  "sina": [
-    {
-      "item": "помидор ",
-      "price": "10 р"
-    },
-    {
-      "item": "огурцы ",
-      "price": "50 р"
-    }
-  ],
-  "tts": 1
-}
-2
-{
-    "mode": 0,
-    "sina": [
-        {
-            "item": "помидор ",
-            "price": "10 р"
-        },
-        {
-            "item": "огурцы ",
-            "price": "50 р"
-        }
-    ],
-    "tts": 1
-}
+server started
+21https://www.twitch.tv/silvername20https://webhook.site/a4baee1f-2307-419d-bf03-045b4b1a46aa21https://www.twitch.tv/silvername20https://webhook.site/a4baee1f-2307-419d-bf03-045b4b1a46aa
+server started
+21https://www.twitch.tv
+/silvername20https://webhook.site
+/a4baee1f-2307-419d-bf03-045b4b1a46aa
+server started
+������������������������������������
+������������������������������������
+����������������������������������������������������
+server started
+https://www.twitch.tv
+/silvernamehttps://webhook.site
+/a4baee1f-2307-419d-bf03-045b4b1a46aa
+server started
+https://www.twitch.tv
+/silvername
+server started
+
+server started
+
+server started
+
+server started
+https://www.twitch.tv
+/silvername
+
+server started
+https://www.twitch.tv
+/silvername
+https://webhook.site
+/a4baee1f-2307-419d-bf03-045b4b1a46aa
+http://webhook.site
+/a4baee1f-2307-419d-bf03-045b4b1a46aa
+http://webhook.site
+/a4baee1f-2307-419d-bf03-045b4b1a46aa
+
+server started
+http://webhook.site
+/a4baee1f-2307-419d-bf03-045b4b1a46aa
+http://webhook.site
+/a4baee1f-2307-419d-bf03-045b4b1a46aa
+http://webhook.site
+/a4baee1f-2307-419d-bf03-045b4b1a46aa
+https://webhook.site
+/a4baee1f-2307-419d-bf03-045b4b1a46aa
+http://webhook.site
+/a4baee1f-2307-419d-bf03-045b4b1a46aa
+http://webhook.site
+/a4baee1f-2307-419d-bf03-045b4b1a46aa
+http://7effaf7db88a.ngrok.io
+/
+http://webhook.site
+/a4baee1f-2307-419d-bf03-045b4b1a46aa
+http://7effaf7db88a.ngrok.io
+/
+http://webhook.site
+/a4baee1f-2307-419d-bf03-045b4b1a46aa
+http://7effaf7db88a.ngrok.io
+/
+http://webhook.site
+/a4baee1f-2307-419d-bf03-045b4b1a46aa
+http://7effaf7db88a.ngrok.io
+/
+http://127.0.0.1:5000
+/
+http://webhook.site
+/a4baee1f-2307-419d-bf03-045b4b1a46aa
+http://7effaf7db88a.ngrok.io
+/
+http://689e29f33e39.ngrok.io
+/
+
+server started
+
+server started
+
+server started
+
+server started
+
 server started

@@ -20,6 +20,7 @@ void Foo_webhooks(const Request& req, Response& res);
 
 
 int main() {
+   
     ofstream logger("log.txt", ofstream::app);
     Server svr;
     logger << u8"\nserver started\n";
@@ -151,7 +152,6 @@ void gen_response(const Request& req, Response& res) {
             }
         }
         else {
-            logger << j_users.dump(2);
             if (jreq["request"]["command"] == "" && jreq["request"]["original_utterance"] == "ping" && jreq["requset"]["type"] == "SimpleUtterance")
             {
 
@@ -288,20 +288,41 @@ void gen_response(const Request& req, Response& res) {
                     post_web += plus;
                 }
                 post_web += "}";
-                users_i.close();
-                Client cli("http://127.0.0.1:5000");
-                auto res = cli.Post("/",post_web, "application/json");
-                if (res) {
-                    if (res->status == 200) {
-                        std::cout << res->body << std::endl;
+                users_i.close(); 
+                ifstream wh("wh.json");
+                string wh_str = "";
+                getline(wh, wh_str);
+                json webhooks = json::parse(wh_str);
+                for (int i = 0; i < webhooks["webhooks"].size(); i++)
+                {
+                    string webhook = webhooks["webhooks"][i];
+                    string str_client_path = "", str_post_path ="";
+                    int pos= webhook.find("/",8);
+                    if (pos != -1) {
+                        str_client_path = webhook.substr(0, pos);
+                        str_post_path = webhook.substr(pos);
+                    }
+                    else { 
+                        str_client_path = webhook.substr(0);
+                        str_post_path = "/";
+                    }
+                    const char* client_path = (str_client_path).c_str();
+                    const char * post_path = (str_post_path).c_str();
+                    
+                    Client cli(client_path);
+                    auto res = cli.Post(post_path, post_web, "application/json");
+                    if (res) {
+                        if (res->status == 200) {
+                            std::cout << res->body << std::endl;
+                        }
+                        else {
+                            std::cout << "Status code: " << res->status << std::endl;
+                        }
                     }
                     else {
-                        std::cout << "Status code: " << res->status << std::endl;
+                        auto err = res.error();
+                        std::cout << "Error code: " << err << std::endl;
                     }
-                }
-                else {
-                    auto err = res.error();
-                    std::cout << "Error code: " << err << std::endl;
                 }
             }
             else{
@@ -356,7 +377,6 @@ void gen_response(const Request& req, Response& res) {
             jres["response"]["buttons"][10]["payload"] = u8"Покупка завершена";
         }
 
-        logger << "\n2\n" + j_users.dump(4);
         string str_p;
         ofstream dio("dio.json");
         dio << jres;
@@ -390,7 +410,6 @@ void Foo_webhooks(const Request& req, Response& res) {
     wh_i.close();
 
     j = json::parse(str);
-    //logger << req.body.c_str();
     std::string webhooks_html = u8"";
     string typ_web = u8R"(<div class="form-row align-items-center">
                     <div class="col">
@@ -430,7 +449,6 @@ void Foo_webhooks(const Request& req, Response& res) {
         }
         wh_o << j;
         wh_o.close();
-        logger << j;
     }
     if (req.has_param("set")) {
         ofstream wh_o("wh.json");
@@ -438,14 +456,9 @@ void Foo_webhooks(const Request& req, Response& res) {
         j["webhooks"].push_back(val);
         wh_o << j;
         wh_o.close();
-        logger << j;
     }
-    if (j["webhooks"] == NULL)
-    {
-        res.set_content(webhooks_html, "text/html");
-    }
-    else
-    {
+    
+    
         for (int i = 0; i < j["webhooks"].size(); i++)
         {
             string copy_typ_web = typ_web, url = u8R"(Webhook URL)";
@@ -453,7 +466,7 @@ void Foo_webhooks(const Request& req, Response& res) {
             copy_typ_web = swap(copy_typ_web, url, j["webhooks"][i]);
             webhooks_html.insert(pos, copy_typ_web);
         }
-    }
+    
 
 
     res.set_content(webhooks_html, "text/html; charset=UTF-8");

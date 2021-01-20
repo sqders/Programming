@@ -457,8 +457,6 @@ void Foo_webhooks(const Request& req, Response& res) {
         wh_o << j;
         wh_o.close();
     }
-    
-    
         for (int i = 0; i < j["webhooks"].size(); i++)
         {
             string copy_typ_web = typ_web, url = u8R"(Webhook URL)";
@@ -466,8 +464,5 @@ void Foo_webhooks(const Request& req, Response& res) {
             copy_typ_web = swap(copy_typ_web, url, j["webhooks"][i]);
             webhooks_html.insert(pos, copy_typ_web);
         }
-    
-
-
     res.set_content(webhooks_html, "text/html; charset=UTF-8");
 }

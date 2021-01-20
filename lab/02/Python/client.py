@@ -4,7 +4,7 @@ import datetime
 import os.path
 app = Flask(__name__)
 pwd = os.path.abspath(os.path.dirname(__file__))
-max_buf=10
+max_buf=1
 ticha=[]
 @app.route('/', methods=['POST', 'GET'])
 def index():

@@ -13,7 +13,7 @@ json weather;
 void re_wet()
 {
 	Client cli_wet("api.openweathermap.org");
-	auto wet = cli_wet.Get("/data/2.5/onecall?lat=44.9&lon=34.1&exclude=daily&units=metric&appid=0b187d44dbd22fecded8524e7dcd0a8e");
+	auto wet = cli_wet.Get("/data/2.5/onecall?lat=44.9&lon=34.1&exclude=daily&lang=ru&units=metric&appid=0b187d44dbd22fecded8524e7dcd0a8e");
 	weather = json::parse(wet->body);
 	ofstream wet_cache("cache.json");
 	wet_cache << weather;
@@ -118,61 +118,11 @@ void gen_response(const Request& req, Response& res) {
 		
 		string distr = weather["hourly"][nice_time]["weather"][0]["description"];
 		string temp = to_string(int(weather["hourly"][nice_time]["temp"]));
-		if (distr.find("overcast clouds") == 0)
-		{
-			str = swap(str, "{hourly[i].weather[0].description}", u8"Небольшие облака");
-			str = swap(str, "{hourly[i].weather[0].icon}", "04d.png");
-		}
-		if (distr.find("clear sky") == 0)
-		{
-			str = swap(str, "{hourly[i].weather[0].description}", u8"Ясно");
-			str = swap(str, "{hourly[i].weather[0].icon}", "01d.png");
-		}
-		if (distr.find("light rain") == 0)
-		{
-			str = swap(str, "{hourly[i].weather[0].description}", u8"Легкий дождь");
-			str = swap(str, "{hourly[i].weather[0].icon}", "01d.png");
-		}
-		if (distr.find("broken clouds") == 0)
-		{
-			str = swap(str, "{hourly[i].weather[0].description}", u8"Переменная облачность");
-			str = swap(str, "{hourly[i].weather[0].icon}", "01d.png");
-		}
-		if (distr.find("few clouds") == 0)
-		{
-			str = swap(str, "{hourly[i].weather[0].description}", u8"Небольшие облака");
-			str = swap(str, "{hourly[i].weather[0].icon}", "02d.png");
-		}
-		if (distr.find("scattered clouds") == 0)
-		{
-			str = swap(str, "{hourly[i].weather[0].description}", u8"Облачно");
-			str = swap(str, "{hourly[i].weather[0].icon}", "03d.png");
-		}
-		if (distr.find("shower rain") == 0)
-		{
-			str = swap(str, "{hourly[i].weather[0].description}", u8"Ливень");
-			str = swap(str, "{hourly[i].weather[0].icon}", "09d.png");
-		}
-		if (distr.find("rain") == 0)
-		{
-			str = swap(str, "{hourly[i].weather[0].description}", u8"Дождь");
-			str = swap(str, "{hourly[i].weather[0].icon}", "10d.png");
-		}
-		if (distr.find("thunderstorm") == 0)
-		{
-			str = swap(str, "{hourly[i].weather[0].description}", u8"Гроза");
-			str = swap(str, "{hourly[i].weather[0].icon}", "11d.png");
-		}
-		if (distr.find("snow") == 0)
-		{
-			str = swap(str, "{hourly[i].weather[0].description}", u8"Снег");
-			str = swap(str, "{hourly[i].weather[0].icon}", "13d.png");
-		}
-		if (distr.find("mist") == 0)
-		{
-			str = swap(str, "{hourly[i].weather[0].description}", u8"Туман");
-			str = swap(str, "{hourly[i].weather[0].icon}", "50d.png");
-		}
+		string icon = weather["hourly"][nice_time]["weather"][0]["icon"];
+		icon += u8"\.png";
+			str = swap(str, "{hourly[i].weather[0].description}", distr);
+			str = swap(str, "{hourly[i].weather[0].icon}", icon);
+		
 		str = swap(str, "{hourly[i].temp}", temp);
 
 		res.set_content(str, "text/html");

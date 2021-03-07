@@ -69,13 +69,209 @@
 ### 4. Серверное приложение
 Для запуска сервера, был использован язык C++, а также сторонние библиотеки: httplib (для работы с HTTP-клиентом и HTTP-сервером), JSON for Modern C++ (позволяет работать с JSON-файлами). Если приходит запрос на "/", сервер формирует и отправляет html-виджет, если же запрос приходит на "/raw", сервер формирует и отправляет json-файл с данными о текущей температуре и состоянии погоды.
 
-Ссылка: https://github.com/sqders/Programming/blob/master/lab/01/ConsoleApplication1/
+Код серверного приложения :
+```c++
+
+#include <iostream>
+#include <string>
+#include <nlohmann/json.hpp>
+#include <cpp_httplib/httplib.h>
+#include <locale>
+using json = nlohmann::json;
+using namespace std;
+using namespace httplib;
+
+json weather;
+
+void re_wet()
+{
+	Client cli_wet("api.openweathermap.org");
+	auto wet = cli_wet.Get("/data/2.5/onecall?lat=44.9&lon=34.1&exclude=daily&lang=ru&units=metric&appid=0b187d44dbd22fecded8524e7dcd0a8e");
+	weather = json::parse(wet->body);
+	ofstream wet_cache("cache.json");
+	wet_cache << weather;
+	wet_cache.close();
+}
+string swap(string word, string word_1, string word_2)
+{
+	std::locale::global(std::locale(""));
+	size_t pos;
+	while ((pos = word.find(word_1)) != std::string::npos)
+	{
+		word.erase(pos, word_1.size());
+		word.insert(pos, word_2);
+	}
+	return word;
+}
+int find_nice_time(int current_time)
+{
+	int nice_time = -1;
+	for (int i = 0; i < weather["hourly"].size(); i++) {
+
+		if (current_time < weather["hourly"][i]["dt"])
+		{
+			nice_time = i;
+			break;
+		}
+		nice_time = -1;
+	}
+	return nice_time;
+}
+void raw_response(const Request& req, Response& res) {
+	Client time_cli("http://worldtimeapi.org");
+	auto time = time_cli.Get("/api/timezone/europe/simferopol");
+	json j = json::parse(time->body);
+	int current_time = j["unixtime"];
+	ifstream wet_caсhe("cache.json");
+	string wet_str = "";
+	getline(wet_caсhe, wet_str, '\0');
+	weather = json::parse(wet_str);
+	wet_caсhe.close();
+	int nice_time = find_nice_time(current_time);
+	if (nice_time == -1)
+	{
+		re_wet();
+		nice_time = find_nice_time(current_time);
+	}
+	string distr = weather["hourly"][nice_time]["weather"][0]["description"];
+	string temp = to_string(int(weather["hourly"][nice_time]["temp"]));
+	string str = "{\"pogoda\":\""+distr+"\",\"temp\":"+temp+"}";
+	res.set_content(str, "text/json");
+}
+
+void gen_response(const Request& req, Response& res) {
+	Client time_cli("http://worldtimeapi.org");
+	auto time = time_cli.Get("/api/timezone/europe/simferopol");
+	json j = json::parse(time->body);
+	int current_time = j["unixtime"];
+	if (time) {
+		if (time->status == 200) {
+
+		}
+		else {
+			std::cout << "Status code: " << time->status << std::endl;
+			string str = "Status code : " + to_string(time->status);
+			res.set_content(str, "text/plain");
+		}
+	}
+	else {
+		auto err = time.error();
+		std::cout << "Error of time code: " << err << std::endl;
+		string str = "Error of time code: " + to_string(err);
+		res.set_content(str, "text/plain");
+	}
+	ifstream wet_caсhe("cache.json");
+	string wet_str = "";
+	getline(wet_caсhe,wet_str, '\0');
+	weather = json::parse(wet_str);
+	wet_caсhe.close();
+	int nice_time = find_nice_time(current_time);
+	if (nice_time == -1)
+	{
+		re_wet();
+		nice_time = find_nice_time(current_time);
+	}
+	ifstream file;
+	file.open(R"(include/Погода сейчас.html)");
+	if (!file.is_open())
+	{
+		cout << "Ошибка открытия шаблона" << endl;
+		res.set_content("Ошибка открытия шаблона", "text/plain");
+	}
+	else {
+		
+		string str = "", str_p = "";
+		while (!file.eof())
+		{
+			str_p = "";
+			getline(file, str_p);
+			str += str_p;
+		}
+		file.close();
+		
+		string distr = weather["hourly"][nice_time]["weather"][0]["description"];
+		string temp = to_string(int(weather["hourly"][nice_time]["temp"]));
+		string icon = weather["hourly"][nice_time]["weather"][0]["icon"];
+		icon += u8"\.png";
+			str = swap(str, "{hourly[i].weather[0].description}", distr);
+			str = swap(str, "{hourly[i].weather[0].icon}", icon);
+		
+		str = swap(str, "{hourly[i].temp}", temp);
+
+		res.set_content(str, "text/html");
+	}
+}
+
+int main() {
+
+	Server svr;
+	svr.Get("/", gen_response);
+	svr.Get("/raw", raw_response);
+	std::cout << "start\n";
+	svr.listen("localhost", 3000); 
+}
+```
 
 ### 5. Клиентское приложение
 Для создания клиентского приложения использовался язык Python. Использовал библиотеки requests
 и json. Приложение подключается к серверу и получает от него данные о текущей температуре и состоянии погоды для города Симферополь
 
-Ссылка: https://github.com/sqders/Programming/blob/master/lab/01/client.py
+Код клиентского приложения :
+```Python
+from tkinter import *
+import requests
+from requests.exceptions import InvalidSchema
+
+def new_wet(event):
+	try:
+		weather = requests.get('http://localhost:3000/raw', headers={'Content-type': 'text/json; charset=UTF-8'}).json()
+	except InvalidSchema:
+		print('Can\'t connect to server. Exit')
+		exit()
+	temp = str(weather['temp']).split('.')[0]
+	pogoda["text"]=weather['pogoda']
+	temperature["text"]=(temp + '°C')
+	print("New weather printed \n")
+	pass
+
+try:
+	weather = requests.get('http://localhost:3000/raw', headers={'Content-type': 'text/json; charset=UTF-8'}).json()
+except InvalidSchema:
+	print('Can\'t connect to server. Exit')
+	exit()
+root = Tk()
+
+temp = str(weather['temp']).split('.')[0]
+top = Frame(root, background="#ff4f00")
+top.pack(side=TOP, fill=X)
+middle = Frame(root, background="white")
+middle.pack(side=TOP, fill=BOTH)
+bottom = Frame(root, background="#ff4f00")
+bottom.pack(side=BOTTOM, fill=X)
+Label(top, 
+	text="Симферополь", 
+	bg="#ff4f00", 
+	fg="#333333",
+	font=('sans-serif', 10, 'bold')).pack(fill=X)
+pogoda=Label(top, 
+	text=weather['pogoda'], 
+	bg="#ff4f00", 
+	fg="#333333",
+	font=('sans-serif', 8))
+temperature=Label(middle, 
+	text=(temp + '°C'), 
+	padx=50, 
+	pady=50,
+	fg="#333333",
+	font=('sans-serif', 50, 'bold'))
+Label(bottom, bg="#ff4f00").pack(fill=X)
+pogoda.pack(fill=X)
+temperature.pack(fill=X)
+root.bind("<Button-3>",new_wet)
+
+root.mainloop()
+
+```
 
 ### 6. Графический интерфейс
 Для создания графического интерфейса приложения (рис. 5) использовалась библиотека tkinter.

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>519</width>
+    <height>613</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_4">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <family>System</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::West</enum>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Triangular</enum>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <property name="elideMode">
+       <enum>Qt::ElideMiddle</enum>
+      </property>
+      <property name="usesScrollButtons">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="tab_tips">
+       <attribute name="title">
+        <string>Заметки</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="1" column="0">
+         <widget class="QTableWidget" name="table_tip">
+          <property name="acceptDrops">
+           <bool>true</bool>
+          </property>
+          <property name="showGrid">
+           <bool>true</bool>
+          </property>
+          <property name="gridStyle">
+           <enum>Qt::DotLine</enum>
+          </property>
+          <property name="cornerButtonEnabled">
+           <bool>true</bool>
+          </property>
+          <attribute name="horizontalHeaderCascadingSectionResizes">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="horizontalHeaderMinimumSectionSize">
+           <number>25</number>
+          </attribute>
+          <attribute name="horizontalHeaderHighlightSections">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderCascadingSectionResizes">
+           <bool>true</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Название</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Текст</string>
+           </property>
+           <property name="whatsThis">
+            <string notr="true"/>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="new_tip_btn">
+          <property name="text">
+           <string>Новая заметка</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_to_do_list">
+       <attribute name="title">
+        <string>Задания</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="1" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Поиск по :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="5">
+         <widget class="QTreeWidget" name="tree_of_work">
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <property name="textElideMode">
+           <enum>Qt::ElideMiddle</enum>
+          </property>
+          <property name="uniformRowHeights">
+           <bool>false</bool>
+          </property>
+          <property name="sortingEnabled">
+           <bool>true</bool>
+          </property>
+          <property name="animated">
+           <bool>false</bool>
+          </property>
+          <property name="columnCount">
+           <number>1</number>
+          </property>
+          <column>
+           <property name="text">
+            <string/>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLineEdit" name="search_lineEdit">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="5">
+         <widget class="QPushButton" name="newTaskPushButton">
+          <property name="text">
+           <string>Новое задание</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="search_type">
+          <item>
+           <property name="text">
+            <string>тексту</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>тегам</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QPushButton" name="searchPushButton">
+          <property name="text">
+           <string>Искать</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_strike">
+       <attribute name="title">
+        <string>Привычки</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="2" column="0">
+         <widget class="QPushButton" name="new_habit_btn">
+          <property name="text">
+           <string>Новая привычка</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QSpinBox" name="currentHabitSpinBox">
+          <property name="maximumSize">
+           <size>
+            <width>40</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="minimum">
+           <number>1</number>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="2">
+         <widget class="QStackedWidget" name="field_of_habits">
+          <property name="currentIndex">
+           <number>-1</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>519</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhNone</set>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="action"/>
+    <addaction name="action_2"/>
+    <addaction name="action_3"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Авторизация</string>
+    </property>
+    <addaction name="action_4"/>
+    <addaction name="action_5"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <action name="action">
+   <property name="text">
+    <string>Добавить</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>Удалить</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>Изменить</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>Вход</string>
+   </property>
+  </action>
+  <action name="action_5">
+   <property name="text">
+    <string>Выход</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NewTaskWindow</class>
+ <widget class="QWidget" name="NewTaskWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>227</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Новое задание</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Дата:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1" colspan="2">
+    <widget class="QDateTimeEdit" name="taskDateTimeEdit">
+     <property name="dateTime">
+      <datetime>
+       <hour>0</hour>
+       <minute>0</minute>
+       <second>0</second>
+       <year>2021</year>
+       <month>1</month>
+       <day>1</day>
+      </datetime>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Тег задания:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QComboBox" name="taskTagComboBox"/>
+   </item>
+   <item row="3" column="0" colspan="3">
+    <widget class="QPushButton" name="newTaskPushButton">
+     <property name="text">
+      <string>Добавить задание</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Тег:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="3">
+    <widget class="QLineEdit" name="taskLineEdit"/>
+   </item>
+   <item row="4" column="1">
+    <widget class="QLineEdit" name="newTagLineEdit"/>
+   </item>
+   <item row="4" column="2">
+    <widget class="QComboBox" name="tagColorComboBox">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>Белый</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Черный</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Красный</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Темно-красный</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Зеленый</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Темно-зеленый</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Синий</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Темно-синий</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Голубой</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Темно-голубой</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Перпурный</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Темно-пурпурный</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Желтый</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Темно-желтый</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Серый</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Темно-серый</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Светло-серый</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="2">
+    <widget class="QPushButton" name="newTagPushButton">
+     <property name="text">
+      <string>Добавить тег</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="2">
+    <widget class="QPushButton" name="toMainWindowPushButton">
+     <property name="text">
+      <string>Вернутся</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -9,6 +9,8 @@ class RegistrWindow: public QWidget
 public:
    explicit RegistrWindow(QWidget *parent = 0);
     ~RegistrWindow();
+    void setLable(QString);
+    void clearWindow();
 private:
     Ui::RegistrWindow *ui;
 private slots :

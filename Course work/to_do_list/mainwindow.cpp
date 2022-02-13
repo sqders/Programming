@@ -12,6 +12,11 @@
 #include <QBrush>
 #include <QColor>
 #include <QLCDNumber>
+#include <QNetworkAccessManager>
+#include <QNetworkRequest>
+#include <QNetworkReply>
+#include <QUrl>
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -20,18 +25,24 @@ MainWindow::MainWindow(QWidget *parent)
     MainWindow::read_Json();
     MainWindow::show_tip();
     MainWindow::show_habits();
+    MainWindow::read_server();
     tipWindow=new NewTipWindow();
     taskWindow=new NewTaskWindow();
     habitWindow=new NewHabitWindow();
     registrWindow=new RegistrWindow();
+    manager=new QNetworkAccessManager();
     connect(ui->action_4,&QAction::triggered,this,&MainWindow::loginMenuBtn);
     connect(ui->action_5,&QAction::triggered,this,&MainWindow::logoutMenuBtn);
+    connect(ui->action_6,&QAction::triggered,this,&MainWindow::synchronyzeServer);
+    connect(ui->action_7,&QAction::triggered,this,&MainWindow::synchronyzeClient);
    // connect(registrWindow,SIGNAL(logiBtnSignal(QString,QString)),this,SLOT());
     ui->action_2->setEnabled(0);
     ui->action_3->setEnabled(0);
+    ui->action_6->setEnabled(0);
+    ui->action_7->setEnabled(0);
+    MainWindow::checkLogin(m_currentJsonObject["user"].toObject()["name"].toString(),m_currentJsonObject["user"].toObject()["password"].toString());
     connect(ui->tabWidget,&QTabWidget::currentChanged,this,&MainWindow::currentTabChanged);
     ui->tabWidget->setCurrentIndex(0);
-
     connect(tipWindow,&NewTipWindow::mainWindowSignal,this,&MainWindow::show_tip);
     connect(ui->new_tip_btn,&QPushButton::clicked,this,&MainWindow::new_tip_clicked);
     connect(tipWindow,SIGNAL(sendNewTip(QString,QString)),this,SLOT(receiveNewTip(QString,QString)));
@@ -45,6 +56,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->new_habit_btn,&QPushButton::clicked,this,&MainWindow::newHabitBtnClicked);
     connect(habitWindow,SIGNAL(newHabitSignal(QJsonObject)),this,SLOT(saveNewHabit(QJsonObject)));
     connect(habitWindow,&NewHabitWindow::toMainWindowSignal,this,&MainWindow::show);
+
+    connect(registrWindow,SIGNAL(loginBtnSignal(QString,QString)),this,SLOT(checkLogin(QString,QString)));
+    connect(registrWindow,SIGNAL(registerBtnSignal(QString,QString)),this,SLOT(registration(QString,QString)));
 }
 
 MainWindow::~MainWindow()
@@ -56,6 +70,15 @@ void MainWindow::new_tip_clicked()
 {
     tipWindow->show();
     this->close();
+}
+
+void MainWindow::read_server(){
+    QFile file("server_info.txt");
+    if(!file.open(QIODevice::ReadOnly)){qDebug()<<"server_info.txt не открылся(";}
+    else{
+    server_info=file.readAll();
+    }
+    file.close();
 }
 
 void MainWindow::read_Json(){
@@ -149,12 +172,12 @@ void MainWindow::show_tasks()
     for (int i = 0; i < task_listSize; ++i) {
         QJsonArray tagArray=m_currentJsonObject["tasks"].toObject()["task_list"].toObject()[keysList.at(i)].toArray();
         for (int j=0;j<tagArray.size() ;j++ ) {
-            int k=0;
+            bool isNewDate=false;
             qint64 time=QDateTime::fromString(tagArray[j].toObject()["date"].toString()).toSecsSinceEpoch();
             for(int l=0;l<vectorOfDate.size();l++){
-                if(vectorOfDate[l]==time) k++;
+                if(vectorOfDate[l]==time) isNewDate=true;
             }
-            if(k==0) vectorOfDate.append(time);
+            if(isNewDate) vectorOfDate.append(time);
         }
     }
     int sizeOfDate=vectorOfDate.size();
@@ -182,10 +205,12 @@ void MainWindow::show_tasks()
                for (int j = 0; j < task_listSize; ++j)
                {
                    bool tagHaveThisTime=false;
-                   QJsonArray tagArray=m_currentJsonObject["tasks"].toObject()["task_list"].toObject()[keysList.at(j)].toArray();
+                   QJsonArray tagArray=m_currentJsonObject["tasks"].toObject()
+                           ["task_list"].toObject()[keysList.at(j)].toArray();
                    QTreeWidgetItem* child1= new QTreeWidgetItem;
                    child1->setText(0,keysList.at(j));
-                   QJsonObject colorObj=m_currentJsonObject["tasks"].toObject()["tags"].toObject()[keysList.at(j)].toObject()["color"].toObject();
+                   QJsonObject colorObj=m_currentJsonObject["tasks"].toObject()
+                           ["tags"].toObject()[keysList.at(j)].toObject()["color"].toObject();
                    QColor backgroundColor(colorObj["red"].toInt(),colorObj["green"].toInt(),colorObj["blue"].toInt());
                    QBrush backgroundBrush(backgroundColor,Qt::BrushStyle::SolidPattern);
                    child1->setBackground(0,backgroundBrush);
@@ -213,7 +238,8 @@ void MainWindow::show_tasks()
                            }
                             }else
                            {
-                               if(dtOfVector==QDateTime::fromString(tagArray[l].toObject()["date"].toString())&&ui->search_lineEdit->text()==tagArray[l].toObject()["text"].toString())
+                               if(dtOfVector==QDateTime::fromString(tagArray[l].toObject()["date"].toString())
+                                       &&ui->search_lineEdit->text()==tagArray[l].toObject()["text"].toString())
                                {
                                    QTreeWidgetItem* child2=new QTreeWidgetItem;
                                    child2->setText(0,dtOfVector.time().toString()+" - "+tagArray[l].toObject()["text"].toString());
@@ -449,11 +475,13 @@ void MainWindow::saveNewHabit(QJsonObject habitObj){
 }
 
 void MainWindow::show_habits(){
-    int currentWidgetIndex=ui->field_of_habits->currentIndex();
+    int currentWidgetIndex=ui->currentHabitSpinBox->value();
     QJsonArray habitsArray=m_currentJsonObject["habits"].toArray();
-    for (int i = ui->field_of_habits->count(); i > 0; i--) {
-       QWidget * someWidget=ui->field_of_habits->widget(i);
-       ui->field_of_habits->removeWidget(someWidget);
+    for(int i = ui->field_of_habits->count()-1; i >= 0; i--)
+    {
+        QWidget* widget = ui->field_of_habits->widget(i);
+        ui->field_of_habits->removeWidget(widget);
+        widget->deleteLater();
     }
     for (int i = 0; i < habitsArray.size(); ++i) {
         QWidget* page=new QWidget();
@@ -477,7 +505,7 @@ void MainWindow::show_habits(){
         lcdNumber->display(currentCount);
         while(1)
         {
-            if(currentCount==0)break;
+            if(currentCount==0) break;
             digit++;
             currentCount/=10;
         }
@@ -494,23 +522,17 @@ void MainWindow::show_habits(){
     }
     ui->currentHabitSpinBox->setMaximum(habitsArray.size());
     ui->currentHabitSpinBox->setValue(currentWidgetIndex);
-    ui->field_of_habits->setCurrentIndex(0);
-    if(habitsArray.size()<currentWidgetIndex-1)
-    {
-    ui->field_of_habits->setCurrentIndex(1);
-    }else{
-    ui->field_of_habits->setCurrentIndex(currentWidgetIndex);
-    }
+    on_currentHabitSpinBox_valueChanged(currentWidgetIndex);
 }
 
 void MainWindow::on_currentHabitSpinBox_valueChanged(int currentIndex)
 {
-    ui->field_of_habits->setCurrentIndex(currentIndex);
+    ui->field_of_habits->setCurrentIndex(currentIndex-1);
 }
 
 void MainWindow::plusCountBtnClicked(){
       QJsonArray habitsArray=m_currentJsonObject["habits"].toArray();
-      QJsonObject habitObj=habitsArray[ui->currentHabitSpinBox->value()-1].toObject();
+      QJsonObject habitObj=habitsArray[ui->field_of_habits->currentIndex()].toObject();
       int currentCount=habitObj["count"].toInt();
       if(habitObj["periodicity"].toString()=="Каждую секунду (тест)"){
           if(QDateTime::fromString( habitObj["time"].toString()).secsTo(QDateTime::currentDateTime())>qint64(3))
@@ -528,7 +550,7 @@ void MainWindow::plusCountBtnClicked(){
               currentCount=0;}
       habitObj["time"]=QDateTime::currentDateTime().toString();
       habitObj["count"]=currentCount+1;
-      habitsArray[ui->currentHabitSpinBox->value()-1]=habitObj;
+      habitsArray[ui->field_of_habits->currentIndex()]=habitObj;
       m_currentJsonObject["habits"]=habitsArray;
           save_Json();
           show_habits();
@@ -560,12 +582,137 @@ void  MainWindow::loginMenuBtn(){
 }
 
 void  MainWindow::logoutMenuBtn(){
+    m_currentJsonObject.remove("user");
+    save_Json();
+    ui->action_6->setEnabled(0);
+    ui->action_7->setEnabled(0);
+}
+
+void MainWindow::sockDisc(){
 
 }
 
-void MainWindow::checkLogin(){}
-void MainWindow::addLogin(){}
-void MainWindow::synchronyze(){}
+void MainWindow::postLoginReady(QNetworkReply * reply){
+    if (reply->error())
+    {
+        qDebug()<<"ERROR";
+        qDebug()<<reply->errorString();
+    }else{
+        QString reply_str= QString::fromUtf8(reply->readAll());
+        qDebug()<< reply_str;
+        if(reply_str=="dont find login or password")
+        {
+            registrWindow->setLable(reply_str);
+        }else{
+            QJsonDocument json_doc=QJsonDocument::fromJson(reply_str.toUtf8());
+            m_currentJsonObject["user"]=json_doc.object();
+            registrWindow->clearWindow();
+            registrWindow->close();
+            this->show();
+            save_Json();
+            ui->action_6->setEnabled(1);
+            ui->action_7->setEnabled(1);
+        }
+    }
+}
+void MainWindow::postRegistrReady(QNetworkReply * reply){
+    if (reply->error())
+    {
+        qDebug()<<"ERROR";
+        qDebug()<<reply->errorString();
+    }else{
+        QString reply_str= QString::fromUtf8(reply->readAll());
+        qDebug()<< reply_str;
+        if(reply_str=="this username is already exist")
+        {
+            registrWindow->setLable(reply_str);
+        }else{
+            QJsonDocument json_doc=QJsonDocument::fromJson(reply_str.toUtf8());
+            m_currentJsonObject["user"]=json_doc.object();
+            registrWindow->clearWindow();
+            registrWindow->close();
+            this->show();
+            save_Json();
+        }
+    }
+}
+
+void MainWindow::postClientSynReady(QNetworkReply * reply){
+    if (reply->error())
+    {
+        qDebug()<<"ERROR";
+        qDebug()<<reply->errorString();
+    }else{
+        QString reply_str= QString::fromUtf8(reply->readAll());
+        qDebug()<<reply_str;
+        QJsonDocument d(QJsonDocument::fromJson(reply_str.toLocal8Bit()));
+        QJsonObject import_json=d.object(),user=m_currentJsonObject["user"].toObject();
+        m_currentJsonObject=import_json;
+        m_currentJsonObject["user"]=user;
+        save_Json();
+    }
+}
+
+void MainWindow::postServerSynReady(QNetworkReply * reply){
+    if (reply->error())
+    {
+        qDebug()<<"ERROR";
+        qDebug()<<reply->errorString();
+    }else{
+        QString reply_str= QString::fromUtf8(reply->readAll());
+        qDebug()<< reply_str;
+        if(reply_str=="log in or sing up")
+        {
+
+        }else{
+            QJsonDocument json_doc=QJsonDocument::fromJson(reply_str.toUtf8());
+
+        }
+    }
+}
+
+void MainWindow::checkLogin(QString login_str,QString password_str){
+    disconnect(manager,&QNetworkAccessManager::finished,nullptr,nullptr);
+    connect(manager,&QNetworkAccessManager::finished,this,&MainWindow::postLoginReady);
+    QUrl url(server_info+"/login/");
+    QNetworkRequest req;
+    req.setUrl(url);
+    req.setHeader(QNetworkRequest::ContentTypeHeader,"text/json");
+    QString  req_data="{\"name\":\""+login_str+"\",\"password\":\""+password_str+"\"}" ;
+    manager->post(req,req_data.toUtf8());
+}
+
+void MainWindow::registration(QString login_str,QString password_str){
+    disconnect(manager,&QNetworkAccessManager::finished,nullptr,nullptr);
+    connect(manager,&QNetworkAccessManager::finished,this,&MainWindow::postRegistrReady);
+    QUrl url(server_info+"/registr/");
+    QNetworkRequest req;
+    req.setUrl(url);
+    req.setHeader(QNetworkRequest::ContentTypeHeader,"text/json");
+    QString  req_data="{\"name\":\""+login_str+"\",\"password\":\""+password_str+"\"}" ;
+    manager->post(req,req_data.toUtf8());
+}
+
+void MainWindow::synchronyzeServer(){
+    disconnect(manager,&QNetworkAccessManager::finished,nullptr,nullptr);
+    connect(manager,&QNetworkAccessManager::finished,this,&MainWindow::postServerSynReady);
+    QUrl url(server_info+"/synserver/");
+    QNetworkRequest req;
+    req.setUrl(url);
+    req.setHeader(QNetworkRequest::ContentTypeHeader,"text/json");
+    QJsonDocument data_doc(m_currentJsonObject);
+    manager->post(req,data_doc.toJson());
+}
+void MainWindow::synchronyzeClient(){
+    disconnect(manager,&QNetworkAccessManager::finished,nullptr,nullptr);
+    connect(manager,&QNetworkAccessManager::finished,this,&MainWindow::postClientSynReady);
+    QUrl url(server_info+"/synclient/");
+    QNetworkRequest req;
+    req.setUrl(url);
+    req.setHeader(QNetworkRequest::ContentTypeHeader,"text/json");
+    QJsonDocument data_doc(m_currentJsonObject);
+    manager->post(req,data_doc.toJson());
+}
 void MainWindow::currentTabChanged(int currentTab){
     disconnect(ui->action_2,&QAction::triggered,nullptr,nullptr);
     disconnect(ui->action,&QAction::triggered,nullptr,nullptr);
@@ -596,5 +743,3 @@ void MainWindow::currentTabChanged(int currentTab){
         break;
     }
 }
-
-

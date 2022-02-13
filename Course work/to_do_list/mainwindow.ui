@@ -25,8 +25,6 @@
       </property>
       <property name="font">
        <font>
-        <family>System</family>
-        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
@@ -255,6 +253,8 @@
     </property>
     <addaction name="action_4"/>
     <addaction name="action_5"/>
+    <addaction name="action_6"/>
+    <addaction name="action_7"/>
    </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
@@ -282,6 +282,16 @@
   <action name="action_5">
    <property name="text">
     <string>Выход</string>
+   </property>
+  </action>
+  <action name="action_6">
+   <property name="text">
+    <string>Экспортировать данные</string>
+   </property>
+  </action>
+  <action name="action_7">
+   <property name="text">
+    <string>Импортировать данные</string>
    </property>
   </action>
  </widget>

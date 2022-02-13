@@ -25,7 +25,7 @@ void NewHabitWindow::newHabitBtnClicked(){
     ui->lineEdit->clear();
     ui->comboBox->setCurrentIndex(0);
     ui->spinBox->setValue(0);
-emit newHabitSignal(habitObj);
+    emit newHabitSignal(habitObj);
 
 }
 void NewHabitWindow::setValue(int strike, QString name, QString periodicity){
@@ -39,4 +39,5 @@ void NewHabitWindow::toMainWindowBtn(){
     ui->comboBox->setCurrentIndex(0);
     ui->spinBox->setValue(0);
     emit toMainWindowSignal();
+    this->close();
 }

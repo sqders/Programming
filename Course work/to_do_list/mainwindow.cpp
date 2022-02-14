@@ -172,10 +172,10 @@ void MainWindow::show_tasks()
     for (int i = 0; i < task_listSize; ++i) {
         QJsonArray tagArray=m_currentJsonObject["tasks"].toObject()["task_list"].toObject()[keysList.at(i)].toArray();
         for (int j=0;j<tagArray.size() ;j++ ) {
-            bool isNewDate=false;
+            bool isNewDate=true;
             qint64 time=QDateTime::fromString(tagArray[j].toObject()["date"].toString()).toSecsSinceEpoch();
             for(int l=0;l<vectorOfDate.size();l++){
-                if(vectorOfDate[l]==time) isNewDate=true;
+                if(vectorOfDate[l]==time) isNewDate=false;
             }
             if(isNewDate) vectorOfDate.append(time);
         }
